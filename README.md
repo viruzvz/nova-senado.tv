@@ -9,3 +9,8 @@ Simples ambiente de desenvolvimento para HTML, CSS, LESS, SCSS
     
     para gerar dist
     yarn build
+
+
+# Carousel progressbar
+
+Na branch 'git checkout carousel-progressbar' vai encontrar carousel bootstrap3 com progressbar.
