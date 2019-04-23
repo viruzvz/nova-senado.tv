@@ -11,6 +11,6 @@ Simples ambiente de desenvolvimento para HTML, CSS, LESS, SCSS
     yarn build
 
 
-# Carousel progressbar
+# Carousel progressbar e Swipe
 
-Na branch 'git checkout carousel-progressbar' vai encontrar carousel bootstrap3 com progressbar.
+Na branch 'git checkout carousel-progressbar' vai encontrar carousel bootstrap3 com progressbar com Swipe.

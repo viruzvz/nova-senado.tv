@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function() {
 	var percent = 0,
 	interval = 30,//it takes about 6s, interval=20 takes about 4s
 	$bar = $('.transition-timer-carousel-progress-bar'),
@@ -28,4 +28,16 @@ $(document).ready(function(){
 				}
 		);
 	}
+	$(".carousel").swipe({
+
+		swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+	  
+		  if (direction == 'left') $(this).carousel('next');
+		  if (direction == 'right') $(this).carousel('prev');
+	  
+		},
+		allowPageScroll:"vertical"
+	  
+	  });
 });
+
