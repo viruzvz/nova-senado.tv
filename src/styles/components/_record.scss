@@ -1,0 +1,16 @@
+// Component Record, Live, Ao vivo
+.record {
+	position: absolute;
+	top: .1em;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: baseline;
+	width: auto;
+}
+.record-live{
+    width: .5em;
+    height: .5em;
+    margin-right: .4em;
+    border-radius: 50%;
+}

@@ -2,13 +2,23 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const path = require('path');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, './dist'),
-      filename: 'index_bundle.js'
+      filename: '[name].bundle.js',
+      publicPath:'/'
     },
+    devServer: {
+        contentBase: path.resolve('./src'),
+        publicPath: '/',
+        inline: true,
+        port: process.env.PORT || 8080,
+        host: '127.0.0.1', // Change to '0.0.0.0' for external facing server
+        historyApiFallback: true,
+      },
     module: {
         rules: [
             {
@@ -17,6 +27,21 @@ module.exports = {
                 use: {
                     loader: "babel-loader"
                 }
+            },
+            { 
+                test: /\.pug$/,
+                use: [
+                    "pug-loader"
+                ]
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    "css-loader",
+                    "postcss-loader"
+                ]
             },
             {
                 test: /\.scss$/,
@@ -28,6 +53,7 @@ module.exports = {
             },
             { 
                 test: /\.less$/,
+                exclude: /node_modules/,
                 use: [ 
                     "style-loader",
                     'css-loader', 
@@ -62,12 +88,19 @@ module.exports = {
         ]
     },
     plugins: [
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                postcss: [
+                    autoprefixer()
+                ]
+            }
+        }),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
         }),
         new HtmlWebpackPlugin ({
-            template: "./src/index.html",
+            template: "./src/index.pug",
             filename: "./index.html"
         }),
         new MiniCssExtractPlugin ({

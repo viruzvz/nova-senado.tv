@@ -1,0 +1,181 @@
+// BODY
+body {background-color: $black;}
+// SYSTEM COLORS
+.negative {color: $negative;}
+.black {color: $black;}
+.gray-dark {color: $gray-dark;}
+.gray-fox {color: $gray-fox;}
+.gray-basic {color: $gray-basic;}
+.gray-default {color: $gray-default;}
+.cut {color: $cut;}
+.white {color: $white;}
+.blue-play {color: $blue-play;}
+.red-cord {color: $red-cord;}
+.shadowc {text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);}
+
+.bg-negative {background-color: $negative;}
+.bg-black {background-color: $black;}
+.bg-gray-dark {background-color: $gray-dark;}
+.bg-gray-fox {background-color: $gray-fox;}
+.bg-gray-basic {background-color: $gray-basic;}
+.bg-gray-default {background-color: $gray-default;}
+.bg-cut {background-color: $cut;}
+.bg-white {background-color: $white;}
+.bg-blue-play {background-color: $blue-play;}
+.bg-red-cord {background-color: $red-cord;}
+.bg-gradient {@extend %caption-gradient;}
+// SYSTEM SIZE
+.size--xlarge {font-size: $xlarge}
+.size--large {font-size: $large}
+.size--medium {font-size: $medium}
+.size--xmiddle {font-size: $xmiddle}
+.size--smiddle {font-size: $smiddle}
+.size--middle {font-size: $middle}
+.size--xregular {font-size: $xregular}
+.size--regular {font-size: $regular}
+.size--small {font-size: $small}
+.size--milli {font-size: $milli}
+@include media-breakpoint-down(sm) { 
+	.size--xlarge {font-size: $large}
+	.size--large {font-size: $medium}
+	.size--medium {font-size: $middle}
+	.size--middle {font-size: $regular}
+}
+// SYSTEM LINK
+.link--cut {
+	color: $cut;
+	transition: $linktransition;
+	border: none;
+	&:hover, &:focus, &:active {
+		color: $white;
+		border: none;
+		outline: none;
+		text-decoration: none;
+	}
+}
+.link--dark {
+	color: $gray-fox;
+	transition: $linktransition;
+	border: none;
+	&:hover, &:focus, &:active {
+		color: $blue-play;
+		border: none;
+		outline: none;
+		text-decoration: none;
+	}
+}
+.link--card {
+	color: $cut;
+	transition: $linktransition;
+	&:hover, &:focus, &:active {
+		color: $gray-dark;
+		border: none;
+		outline: none;
+		text-decoration: none;
+	}
+}
+.link--blueplay {
+	color: $blue-play;
+	transition: $linktransition;
+	border: none;
+	&:hover, &:focus, &:active {
+		color: $red-cord;
+		border: none;
+		outline: none;
+		text-decoration: none;
+	}
+}
+body {
+	line-height: 1.4;
+}
+// POSITIONS SIDES
+.psr-0 {right: 0;}
+.psl-0 {left: 0;}
+.pst-0 {top:0;}
+.psb-0 {bottom: 0;}
+
+// SYSTEM Z-INDEX
+.zindex-fixed {
+	z-index: $zindex-fixed;
+}
+// FIX ITENS
+.dvoqQu {
+  > div {
+    width: 100%;
+    align-items: flex-end;
+    display: flex;
+  }
+  .bg-gradient {
+    width: 100%;
+  }
+}
+.negative-gutter--right {
+	margin-right: -0.75rem;
+}
+.no-max--width{
+	max-width: none;
+}
+.no--focus {
+	box-shadow: none !important;
+}
+.pb-6 {
+	padding-bottom: 180px; 
+}
+
+//  Floating Video Start
+.minimum-sticky-12 {
+	width: 100%;
+	min-height: 650px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.is-sticky {
+  position: fixed;
+  right: 3px;
+  bottom: 3px;
+  top: auto;
+  left: auto;
+  max-width: 280px;
+  max-height: 158px;
+  width: 280px;
+  height: 158px;
+  animation-name: fadeInUp;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  z-index: 1;
+}
+
+@-webkit-keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
+// Floating Video Ends
+
+@include media-breakpoint-down(xs) {
+	.no-gutter--xs {padding: 0;}
+}
+@include media-breakpoint-down(md) {
+	.minimum-sticky-12 {
+		width: 100%;
+		min-height: 100px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

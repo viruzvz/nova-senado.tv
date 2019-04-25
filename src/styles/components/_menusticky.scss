@@ -1,0 +1,31 @@
+.menuStick {
+  background-color: $gray-dark;
+  a {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+.menuStick.sticky {
+  background-color: $gray-fox;
+  position: sticky;
+  top: -1px;
+  width: 100%;
+  left: 0;
+  transform: translateZ(0px);
+}
+.menuStick.sticky + .container {
+}
+.menuStick-link {
+  margin-left: 15px;
+  margin-right: 15px;
+  &.active {
+    position: relative;
+    > a {
+      &:after {
+        @extend %active;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.card-overley {
+	position: relative;
+ 	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		border: 0;
+		object-fit: cover;
+		transition: all .2s ease-in-out;
+	}
+	&:hover {
+		text-decoration: none;
+		img {
+			transform: scale(1.1);
+		}
+		.card {
+			background-color: white;
+		}
+		.hoverplay {
+			opacity: 1;
+			z-index: 1;
+		}
+	}
+	.card {
+		height: 100%;
+		outline: none;
+		background-color: $black;
+		a {
+			outline: none;
+		}
+	}
+	.hoverplay {
+		@extend %hover-default;
+		.fa-stack {
+			width: 5em;
+			height: 1em;
+		}
+	}
+	.card-circle {
+		border-radius: 50%;
+	}
+	.top {
+		top: 22%;
+	}
+	.middle {
+		top: 50%;
+	}
+}
+.embed-x {
+    position: relative;
+    display: block;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.Embed--3by2 {
+	padding-bottom: 66.667%;
+}
+.Embed--ultra {
+	padding-bottom: 150%;
+}
+.cardimg-triple {
+	height: auto;
+	flex: 1;
+	&:hover {
+		img {
+			filter: grayscale(100%);
+		}
+	}
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		border: 1px solid #333;
+		object-fit: cover;
+	}
+}
+.cardimg-title {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.img-saturate {
+	filter: saturate(0);
+}

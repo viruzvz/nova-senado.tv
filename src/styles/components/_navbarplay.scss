@@ -1,0 +1,37 @@
+.navbar-play {
+  padding: 0;
+  .navbar-nav {
+    .nav-link {
+      color: $cut;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      transition: $linktransition;
+      &:hover,
+      &:focus {
+        color:$white;
+      }
+    }
+    .show > .nav-link,
+    .current > .nav-link,
+    .nav-link.show,
+    .nav-link.current {
+      color: $white;
+      position: relative;
+      font-weight: bold;
+      &:after {
+        @extend %active;
+      }
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-dark-color;
+    border-color: $navbar-dark-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-dark-toggler-icon-bg;
+  }
+  .navbar-text {
+  }
+}

@@ -1,0 +1,26 @@
+.navsecplay {
+    vertical-align: baseline;
+    width: auto;
+    list-style: none;
+    margin: 0 auto;
+    width: 110rem;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-self: center;
+    align-items: center;
+    overflow: hidden;	
+    li {
+        flex-shrink: 0;
+        display: inline-block;
+    }
+}
+@include media-breakpoint-down(xs) { 
+    .navsecplay {
+        overflow-x: scroll;
+    }
+}

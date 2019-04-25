@@ -1,0 +1,110 @@
+.search-sty {
+	position: relative;
+	color: $white;
+	input {
+		outline: none;
+
+	}
+	input[type='search'] {
+	-webkit-appearance: textfield;
+	-webkit-box-sizing: content-box;
+	background-color: transparent;
+	width: 15px;
+	cursor: pointer;
+	transition: all .5s;
+	border-radius: none;
+	border-color: $black;
+  	font-family: FontAwesome; 
+		&:focus {
+			width: 160px;
+			font-family: inherit;
+			background-color: $gray-basic;
+			box-shadow: none;
+			color: $white;
+			cursor: inherit;
+			&::placeholder {
+				color:transparent;
+			}
+		}
+		&::placeholder {
+			color:$white;
+		}
+	}
+	input::-webkit-search-decoration,
+	input::-webkit-search-cancel-button {
+		display: none;
+	}
+}
+@include media-breakpoint-down(sm) {
+	.search-sty {
+		input[type='search'] {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			margin-left: 6px;
+			margin-right: 6px;
+			&:focus {
+				width:100%;
+			}
+		}
+	}
+}
+.close {
+	position: absolute; 
+	z-index: $zindex-modal;
+}
+.close-after {
+	    right: 35px;
+	    top: 30px;
+	&:after {
+	    content: 'X';
+	    color: $gray-fox;
+
+	}
+}
+.busca {
+	.modal-content {
+		border: 0;
+	}
+	.input-group {
+		align-items: center;
+	    //border: 1px solid $gray-default;
+	    &:focus {
+	    	outline: none;
+	    	box-shadow: none;
+	    }
+	    .rbt {
+	    	padding: 2px 0 0 0;
+    		min-height: 44px;
+		    &::placeholder {
+		    	color: $cut !important;
+		    }
+	    }
+	}
+	.form-control {
+	    background-color: $gray-fox;
+	    border: none;
+	    border-radius: inherit;
+	    padding: 10px 10px 10px 15px;
+	    transition: all .5s;
+	    color: $cut;
+	    .rbt-token {
+	    	display: inline;
+	    }
+	    .rbt-input-hint-container {
+	    	display: inline !important;
+	    }
+		.rbt-aux .rbt-close {
+		   	margin-top: 0;
+		}
+	    &::placeholder {
+	    	color: $cut !important;
+	    }
+	    &:focus, &:active {
+	    	border-radius: inherit;
+	    	background-color: $gray-basic;
+	    	outline: none;
+	    	box-shadow: none;
+	    	color: $white;
+	    }
+	}
+}

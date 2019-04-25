@@ -1,0 +1,27 @@
+.NavGlobal {
+    min-height: 47px;
+    line-height: 40px;
+    background-color: #00305c;
+    border-bottom: 4px solid #00824a;
+    color: #fff;
+    box-shadow: 0 4px 0 #fae042;
+    margin-bottom: 4px;
+}
+.dropdown-menu.dropdown-menu--dark {
+	border-radius: 0;
+    background-color: #1a456c;
+    padding: 5px 20px;
+    border-bottom: none;
+    border-top: none;
+    box-shadow: none;
+    font-size: 12px;
+    line-height: 1.42857143;
+	a {
+	    padding: 6px 0;
+	    color: #fff;
+	    display: block;
+	    &:not(:last-child) {
+			border-bottom: 1px solid #1a9fdd;
+		}
+	}
+}

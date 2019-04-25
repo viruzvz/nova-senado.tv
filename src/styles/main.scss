@@ -1,23 +1,26 @@
-$bg: purple;
-html, body {
-    height: 100%;
-    width: 100%;
-}
-section {
-    background: $bg;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* align items in Main Axis */
-    align-items: center; /* align items in Cross Axis */
-    align-content: center; /* Extra space in Cross Axis */
-}
-h1 {
-    padding: 0;
-    margin: 0 !important;
-}
-.full {
-    align-self: center;
-    text-align: center;
-}
+@import './vendors/bootstrap';
+
+@import '/template/variables';
+@import '/template/template';
+@import '/template/mixins';
+
+// @import '/components/divider';
+// @import '/components/inputsearch';
+@import '/components/navbarplay';
+// @import '/components/record';
+// @import '/components/card';
+// @import '/components/timer';
+// @import '/components/menusticky';
+// @import '/components/carouselplay';
+// @import '/components/share';
+// @import '/components/navsecplay';
+// @import '/components/btnfixed';
+@import '/components/navglobal';
+// @import "~video-react/styles/scss/video-react";
+// @import '~flatpickr/dist/themes/dark';
+// @import '~react-bootstrap-typeahead/css/Typeahead';
+// @import '/components/flatpickr-dark';
+// @import '/components/typeahead';
+// @import '/components/carousel';
+// @import '/components/ytvideo';
+// @import '/components/toggle-arrow';
