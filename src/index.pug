@@ -1,6 +1,8 @@
 doctype html  
 html(lang='pt')  
   head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
     title Senado Play
   body
     block header
@@ -8,5 +10,6 @@ html(lang='pt')
       .container
         include partials/header.pug
     block content
+      include home.pug
     block foot
       include partials/foot.pug

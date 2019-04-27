@@ -3,6 +3,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require("webpack");
 const path = require('path');
 const autoprefixer = require('autoprefixer');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -95,6 +96,9 @@ module.exports = {
                 ]
             }
         }),
+        new CopyPlugin([
+            { from: 'src/assets/', to: 'assets'}
+        ]),
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"

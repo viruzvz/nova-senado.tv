@@ -1,0 +1,48 @@
+.share
+  .dropdown
+    button.size--small.link--cut.px-0.btn.btn-link.btn-ms(type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+      i.fa.fa-share
+      |  COMPARTILHAR
+    .dropdown-menu(tabindex='-1', role='menu', aria-hidden='true' aria-labelledby="dropdownMenuButton")
+      ul.list-unstyled.mb-0
+        li.size--regular.dropdown-item
+          .row
+            .col-md-8
+              .SocialMediaShareButton.SocialMediaShareButton--facebook.iconpull-left.p-1.button(role='button', tabindex='0')
+                i.fa.fa-facebook
+                |   Facebook
+            .col
+        li.size--regular.dropdown-item
+          .SocialMediaShareButton.SocialMediaShareButton--twitter.iconpull-left.p-1.button(role='button', tabindex='0')
+            i.fa.fa-twitter
+            |  Twitter
+        li.size--regular.dropdown-item
+          .row
+            .col-md-8
+              .SocialMediaShareButton.SocialMediaShareButton--googlePlus.iconpull-left.p-1.button(role='button', tabindex='0')
+                i.fa.fa-google-plus-official
+                |  Google Plus
+            .col
+        li.size--regular.dropdown-item
+          .row
+            .col-md-8
+              .SocialMediaShareButton.SocialMediaShareButton--linkedin.iconpull-left.p-1.button(role='button', tabindex='0')
+                span.linkedin.bg-white.size--milli.black in
+                |  Linkedin
+            .col
+        li.size--regular.dropdown-item
+          .SocialMediaShareButton.SocialMediaShareButton--whatsapp.iconpull-left.p-1.button(role='button', tabindex='0')
+            i.fa.fa-whatsapp
+            |  Whatsapp
+        li.size--regular.dropdown-item
+          .SocialMediaShareButton.SocialMediaShareButton--telegram.iconpull-left.p-1.button(role='button', tabindex='0')
+            i.fa.fa-telegram
+            |  Telegram
+        li.size--regular.dropdown-item
+          .SocialMediaShareButton.SocialMediaShareButton--email.iconpull-left.p-1.button(role='button', tabindex='0')
+            i.fa.fa-envelope
+            |  E-mail
+        li.size--regular.dropdown-item
+          button.size--regular.dropdown-item.dropdown-item(type='button', tabindex='0')
+            i.fa.fa-copy
+            input#input-compartilhar(type='text', name='copy', readonly='', placeholder='https://youtu.be/ROoAf5JU88A', value='https://youtu.be/ROoAf5JU88A')

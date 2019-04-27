@@ -5,5 +5,18 @@ nav.navbar.black.navbar-expand-md.navbar-play
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
   #navbarNavAltMarkup.collapse.navbar-collapse
-    .navbar-nav
-      include nav.pug
+    include nav.pug
+    ul.ml-auto.d-none.d-lg-block.navbar-nav
+      span
+        a.size--smiddle.mx-2.link--cut(href='https://www.facebook.com/tvsenado', target='_blank', title='Facebook')
+          i.fa.fa-facebook
+        a.size--smiddle.mx-2.link--cut(href='https://twitter.com/senadofederal', target='_blank', title='Twitter')
+          i.fa.fa-twitter
+        a.size--smiddle.mx-2.link--cut(href='https://www.instagram.com/tvsenado/', target='_blank', title='Instagram')
+          i.fa.fa-instagram
+        a.size--smiddle.link--cut.ml-2.mr-0(href='https://www.youtube.com/TVSenadoOficial', target='_blank', title='Youtube')
+          i.fa.fa-youtube
+    ul.ml-auto.navbar-nav
+      div
+        a.btn.negative-gutter--right.size--smiddle
+          i.link--cut.fa.fa-search
