@@ -107,6 +107,10 @@ module.exports = {
             template: "./src/index.pug",
             filename: "./index.html"
         }),
+        new HtmlWebpackPlugin ({
+            template: "./src/home.pug",
+            filename: "./home.html"
+        }),
         new MiniCssExtractPlugin ({
             filename: "[name].css",
             chunkFilename: "[id].css"
