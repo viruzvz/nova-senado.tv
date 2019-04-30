@@ -1,5 +1,5 @@
 include mixin.pug
-.position-relative.pb-6.container
+.position-relative.pb-6.container.scrollspy-example(data-spy="scroll" data-target="#spy" data-offset="0")
   #canais-ao-vivo
     .row
       +card('https://picsum.photos/800/600?random=1','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
@@ -35,7 +35,7 @@ include mixin.pug
     .text-center.row
       .col
         button#btn-destaques.mb-4.btn.btn-outline-secondary(type='button') Ver Mais
-  #reforma
+  #reforma-trabalhista
     .mb-4.text-left.row
       .col
         p.border-bottom.white.m-0.pb-2 REFORMA TRABALHISTA
