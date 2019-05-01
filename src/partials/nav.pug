@@ -11,3 +11,13 @@ ul.navbar-nav.ml-auto
   li.nav-item.text-uppercase.mx-2.size--regular
     block programas
       a.nav-link.link--cut(href='/programas.html') Programas
+  li.nav-item.text-uppercase.mx-2.size--regular
+    block programacao
+      .dropdown-dark
+        .btn-group
+          a.nav-link.link--cut.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Programação
+          .dropdown-menu.left-inherit.size--regular
+            a.dropdown-item(href='#') Action
+            a.dropdown-item(href='#') Another action
+            a.dropdown-item(href='#') Something else here

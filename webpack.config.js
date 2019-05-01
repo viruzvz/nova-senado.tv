@@ -123,6 +123,14 @@ module.exports = {
             template: "./src/programas.pug",
             filename: "./programas.html"
         }),
+        new HtmlWebpackPlugin ({
+            template: "./src/sintonizar.pug",
+            filename: "./sintonizar.html"
+        }),
+        new HtmlWebpackPlugin ({
+            template: "./src/programacao.pug",
+            filename: "./programacao.html"
+        }),
         new MiniCssExtractPlugin ({
             filename: "[name].css",
             chunkFilename: "[id].css"

@@ -1,4 +1,4 @@
-.share {
+.dropdown-dark {
 	display: inline;
 	.dropup, .dropdown {
 	    display: inline;
@@ -48,6 +48,9 @@
 	div:first-child {
 		float:left;
 	}
+}
+.left-inherit {
+	left: inherit;
 }
 @include media-breakpoint-down(sm) {
 	.show > .dropdown-menu {
