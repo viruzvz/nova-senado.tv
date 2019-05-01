@@ -41,6 +41,12 @@ body {background-color: $black;}
 	.size--medium {font-size: $middle}
 	.size--middle {font-size: $regular}
 }
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
 // SYSTEM LINK
 .link--cut {
 	color: $cut;

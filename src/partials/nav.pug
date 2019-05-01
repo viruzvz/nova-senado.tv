@@ -1,9 +1,13 @@
 ul.navbar-nav.ml-auto
   li.nav-item.text-uppercase.mx-2.size--regular
-    a.nav-link.link--cut.current(href='/') Início
+    block inicio
+      a.nav-link.link--cut(href='/home.html') Início
   li.nav-item.text-uppercase.mx-2.size--regular
-    a.nav-link.link--cut(href='/plenario-comissoes.html') Plenário e Comissões
+    block plenario
+      a.nav-link.link--cut(href='/plenario-comissoes.html') Plenário e Comissões
   li.nav-item.text-uppercase.mx-2.size--regular
-    a.nav-link.link--cut(href='/senadores') Senadores
+    block senadores
+      a.nav-link.link--cut(href='/senadores.html') Senadores
   li.nav-item.text-uppercase.mx-2.size--regular
-    a.nav-link.link--cut(href='/programas') Programas
+    block programas
+      a.nav-link.link--cut(href='/programas.html') Programas
