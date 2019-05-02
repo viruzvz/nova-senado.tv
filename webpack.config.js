@@ -16,7 +16,7 @@ module.exports = {
         contentBase: path.resolve('./src'),
         publicPath: '/',
         inline: true,
-        port: process.env.PORT || 8080,
+        port: process.env.PORT || 8000,
         host: '127.0.0.1', // Change to '0.0.0.0' for external facing server
         historyApiFallback: true,
       },
