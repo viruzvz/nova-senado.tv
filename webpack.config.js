@@ -49,6 +49,13 @@ module.exports = {
                 use: [
                     "style-loader",
                     "css-loader",
+                    { 
+                        loader: 'postcss-loader', 
+                        options: {
+                            sourceMap: true, 
+                            plugins: () => [autoprefixer()] 
+                        }
+                    },
                     "sass-loader"
                 ]
             },
@@ -58,6 +65,13 @@ module.exports = {
                 use: [ 
                     "style-loader",
                     'css-loader', 
+                    { 
+                        loader: 'postcss-loader', 
+                        options: {
+                            sourceMap: true, 
+                            plugins: () => [autoprefixer()] 
+                        }
+                    },
                     'less-loader'
                 ]
             },
@@ -89,13 +103,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.LoaderOptionsPlugin({
-            options: {
-                postcss: [
-                    autoprefixer()
-                ]
-            }
-        }),
         new CopyPlugin([
             { from: 'src/assets/', to: 'assets'}
         ]),

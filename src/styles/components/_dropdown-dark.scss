@@ -3,11 +3,16 @@
 	.dropup, .dropdown {
 	    display: inline;
 	}
+	.show >	.dropdown-toggle::after {
+		border-left:inherit;
+		border-right:inherit;
+		border-top:inherit;
+	}
 	.show > .dropdown-menu {
 		opacity:1;
 	}
 	.dropdown-menu {
-		transition: all 200ms ease-in-out;
+		transition: $linktransition;
 		opacity:0;
 		background-color: $gray-fox;
 		padding:0;
@@ -35,6 +40,7 @@
 	.dropdown-item:not(:last-child) {
 		border-bottom: 1px dotted $gray-basic;
 	}
+	
 }
 .linkedin {
     border-radius: 50%;
