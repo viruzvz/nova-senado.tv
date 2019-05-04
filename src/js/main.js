@@ -1,14 +1,15 @@
 $(document).ready(function(){
     // Add scrollspy to <body>
-    $('body').scrollspy({target: "#spy", offset: 70});   
-  
+    $('body').scrollspy({
+      target: "#spy",
+      offset: 70, 
+    });  
     // Add smooth scrolling on all links inside the navbar
     $(".nav-item a").on('click', function(event) {
       // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
         // Prevent default anchor click behavior
         event.preventDefault();
-  
         // Store hash
         var hash = this.hash;
   
@@ -17,12 +18,22 @@ $(document).ready(function(){
         $('html, body').animate({
           scrollTop: $(hash).offset().top
         }, 800, function(){
-     
           // Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash;
         });
       }  // End if
     });
+  });
+
+  var mainbottom = $('.menuStick').offset().top + $('.menuStick').height();
+
+  $(window).on('scroll',function(){ 
+    stop = Math.round($(window).scrollTop()); 
+    if (stop > mainbottom) { 
+       $('.menuStick').addClass('sticky'); 
+    } else { 
+       $('.menuStick').removeClass('sticky'); 
+    } 
   });
 
   

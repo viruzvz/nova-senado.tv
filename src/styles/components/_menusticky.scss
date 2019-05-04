@@ -6,14 +6,38 @@
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    border-bottom: 4px solid #0095DA;
+    background-color:transparent !important;
+    border-radius: 0 !important;
+  }
+}
+.stickyIE {
+  position: -webkit-sticky;
+  top: 0;
+  &:before, &:after {
+    content: '';
+    display: table;
+  }
 }
 .menuStick.sticky {
   background-color: $gray-fox;
   position: sticky;
-  top: -1px;
+  top: 0;
   width: 100%;
   left: 0;
   transform: translateZ(0px);
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    background-color: $gray-dark;
+  }
+
+  to {
+    background-color: $gray-fox;
+  }
 }
 .menuStick.sticky + .container {
 }
