@@ -1,3 +1,4 @@
+// By Carlos vz
 // BODY
 body {background-color: $black;}
 // SYSTEM COLORS
@@ -129,11 +130,16 @@ body {
 }
 
 //  Floating Video Start
-.minimum-sticky-12 {
+.minimum-sticky, .minimum-sticky-16by9, .minimum-sticky-4by3 {
 	width: 100%;
-	min-height: 650px;
 	display: flex;
 	flex-wrap: wrap;
+}
+.minimum-sticky-16by9 {
+	min-height: 650px;
+}
+.minimum-sticky-4by3 {
+	min-height: 565px;
 }
 .is-sticky {
   position: fixed;
