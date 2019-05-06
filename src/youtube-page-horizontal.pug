@@ -1,0 +1,25 @@
+extends index.pug
+block content
+  .bg-gray-fox.pt-3
+    .container
+      include componentes/content-video.pug
+        .minimum-sticky-12
+          .mb-3.no-gutter--xs.col-12
+            block include
+              .embed-responsive.embed-responsive-16by9
+                include componentes/youtube.pug
+              .row.pt-3
+                .col
+                  p.size--middle.mb-1.red-cord
+                    strong Plenário
+                .col
+                  p.cut.text-right
+                    small 13/12/2018
+              h1.size--xmiddle.white.border-bottom.pb-3
+                | Para Vanessa, substituição de médicos cubanos por profissionais brasileiros não é um sucesso
+              .cut
+                | Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam, numquam nam. Quos harum error consequatur. Pariatur, architecto sed minus molestiae eos quasi nulla vitae a voluptatem amet maxime dolores aliquam.
+  .divider.bg-blue-play
+  .bg-gray-dark
+    include componentes/navsec.pug
+    include componentes/cards.pug

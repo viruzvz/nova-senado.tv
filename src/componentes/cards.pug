@@ -1,75 +1,87 @@
 include mixin.pug
 .position-relative.pb-6.container.scrollspy-example(data-spy="scroll" data-target="#spy" data-offset="0")
-  #canais-ao-vivo
-    .row
-      +card('https://picsum.photos/800/600?random=1','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=2','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=3','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row
-      +card('https://picsum.photos/800/600?random=4','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=5','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=6','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row
-      +card('https://picsum.photos/800/600?random=7','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=8','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=9','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+  #canais-ao-vivo.video-list
+    .row.row-hidden
+      +card('./youtube-page-vertical.html','https://picsum.photos/800/600?random=1','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=2','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=3','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=4','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=5','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=6','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=7','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=8','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=9','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=7','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=8','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=9','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=7','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=8','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=9','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=7','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=8','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=9','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
     .text-center.row
       .col
-        button#btn-destaques.mb-4.btn.btn-outline-secondary(type='button') Ver Mais
-  #destaques
+        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
+  #destaques.video-list
     .mb-4.text-left.row
       .col
         p.border-bottom.white.m-0.pb-2 DESTAQUES
-    .row
-      +card('https://picsum.photos/800/600?random=10','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=11','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=12','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row
-      +card('https://picsum.photos/800/600?random=13','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=14','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=15','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row
-      +card('https://picsum.photos/800/600?random=16','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=17','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=18','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=10','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=11','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=12','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=13','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=14','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=15','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=16','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=17','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=18','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
     .text-center.row
       .col
-        button#btn-destaques.mb-4.btn.btn-outline-secondary(type='button') Ver Mais
-  #reforma-trabalhista
+        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
+  #reforma-trabalhista.video-list
     .mb-4.text-left.row
       .col
         p.border-bottom.white.m-0.pb-2 REFORMA TRABALHISTA
-    .row
-      +card('https://picsum.photos/800/600?random=19','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=20','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=21','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row
-      +card('https://picsum.photos/800/600?random=22','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=23','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=24','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row
-      +card('https://picsum.photos/800/600?random=25','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=26','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=27','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=19','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=20','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=21','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=22','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=23','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=24','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=25','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=26','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=27','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
     .text-center.row
       .col
-        button#btn-destaques.mb-4.btn.btn-outline-secondary(type='button') Ver Mais
-  #programas
+        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
+  #programas.video-list
     .mb-4.text-left.row
       .col
         p.border-bottom.white.m-0.pb-2 PROGRAMAS
-    .row
-      +card('https://picsum.photos/800/600?random=28','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=29','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=30','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row
-      +card('https://picsum.photos/800/600?random=31','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=32','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=33','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row
-      +card('https://picsum.photos/800/600?random=34','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=35','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('https://picsum.photos/800/600?random=36','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=28','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=29','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=30','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=31','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=32','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=33','', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('','https://picsum.photos/800/600?random=34','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=35','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('','https://picsum.photos/800/600?random=36','record', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
     .text-center.row
       .col
-        button#btn-destaques.mb-4.btn.btn-outline-secondary(type='button') Ver Mais
+        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
