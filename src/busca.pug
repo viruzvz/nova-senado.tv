@@ -1,0 +1,51 @@
+extends index.pug
+include componentes/mixin.pug
+block content
+  .bg-gray-dark
+    .container.py-3
+      .row
+        .col
+          h1.white.size--large.text-uppercase BUSCA
+      form.busca
+        .position-relative.row.form-group
+          .col-sm-12
+            .input-group.bg-gray-fox.pl-3
+              .input-group-addon.size--xmiddle.white
+                i.fa.fa-search.mr-3
+              input#text-search.form-control(type='search', name='text-search', value='Palavra')
+        .row
+          .col-sm-4
+            .form-group
+              label.white(for='date-search')
+                i.fa.fa-calendar 
+                | &nbsp; Data inicial / final
+              .input-group.bg-gray-fox
+                input#date-search.form-control.flatpickr-input.active(value='', type='text', readonly='readonly')
+          .col-sm-8
+            .form-group
+              label.white 
+                i.fa.fa-tags 
+                | &nbsp; Tags
+              .input-group.bg-gray-fox
+                input#date-search.form-control(value='', type='text')
+        .position-relative.row.form-group
+          .text-right.col-sm-12
+            button.btn.btn-outline-primary(type='button') Buscar
+    .divider.bg-blue-play.mb-3
+  
+    .pb-2.container
+      .row
+        .col
+          p.border-bottom.white.m-0.pb-2 Resultado da Busca
+    .position-relative.pb-6.container
+      #resultado-da-busca
+        .row
+            +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=1','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+            +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=2','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+            +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=3','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+            +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=4','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+        .row
+            +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=5','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+            +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=6','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+            +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=7','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+            +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=8','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')

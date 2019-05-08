@@ -1,5 +1,5 @@
-mixin card(href, src, record, txt, txt1, txt2)
-  .cut.mb-4.card-overley.col-sm-6.col-md-6.col-lg-4
+mixin card(classes, href, src, record, txt, txt1, txt2)
+  .cut.mb-4.card-overley(class= classes)
     a(href= href).dp-change-main-video.card.rounded-0.border-0.link--card
       .embed-x.Embed--3by2
         .hoverplay.middle

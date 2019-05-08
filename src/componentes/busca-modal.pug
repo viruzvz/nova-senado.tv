@@ -1,9 +1,11 @@
 .modal.fade.show#busca-modal(tabindex="-1" role="dialog" aria-labelledby="#busca-modalLabel" aria-hidden="true")
   .modal-dialog.m-0.no-max--width.busca(role='document')
-    .modal-content
-      form(action='/busca')
+    .modal-content.shadow
+      form(action='./busca.html')
         .input-group.bg-gray-fox.pl-3
           .input-group-addon.size--xmiddle.white
             i.fa.fa-search.mr-3
           button.position-absolute.mr-3.zindex-fixed.psr-0.d-none.d-sm-block.btn.btn-danger.btn-sm(type='button', data-dismiss="modal") X
           input.form-control.p-4.size--xmiddle.modalinput(type='text', name='textsearch', placeholder='encontre o seu vídeo')
+
+          

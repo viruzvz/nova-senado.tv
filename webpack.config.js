@@ -150,6 +150,10 @@ module.exports = {
       template: './src/videoMP4-page.pug',
       filename: './videoMP4-page.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/busca.pug',
+      filename: './busca.html'
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
