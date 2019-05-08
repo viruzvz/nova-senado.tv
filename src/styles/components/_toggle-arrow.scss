@@ -1,23 +1,23 @@
-[data-toggle='collapse']:before {
-  content: "\f139";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-  position: absolute;
-  color: #ccc;
-  right: 15px;
-}
-[aria-expanded="true"] {
-  color:$red-cord;
-}
-[data-toggle='collapse'].collapsed:before {
-  content: "\f13a";
-  font-family: FontAwesome;
-  font-style: normal;
-  font-weight: normal;
-  text-decoration: inherit;
-  position: absolute;
-  color: #ccc;
-  right: 15px;
-}
+// [data-toggle='collapse']:before {
+//   content: "\f139";
+//   font-family: FontAwesome;
+//   font-style: normal;
+//   font-weight: normal;
+//   text-decoration: inherit;
+//   position: absolute;
+//   color: #ccc;
+//   right: 15px;
+// }
+// [aria-expanded="true"] {
+//   color:$red-cord;
+// }
+// [data-toggle='collapse'].collapsed:before {
+//   content: "\f13a";
+//   font-family: FontAwesome;
+//   font-style: normal;
+//   font-weight: normal;
+//   text-decoration: inherit;
+//   position: absolute;
+//   color: #ccc;
+//   right: 15px;
+// }

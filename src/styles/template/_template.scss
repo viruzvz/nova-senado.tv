@@ -182,6 +182,9 @@ body {
 
 @include media-breakpoint-down(xs) {
 	.no-gutter--xs {padding: 0;}
+	.minimum-sticky-16by9, .minimum-sticky-4by3 {
+		min-height: inherit;
+	}
 }
 @include media-breakpoint-down(md) {
 	.minimum-sticky-12 {

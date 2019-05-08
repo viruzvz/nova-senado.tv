@@ -146,6 +146,10 @@ module.exports = {
       template: './src/youtube-page-horizontal.pug',
       filename: './youtube-page-horizontal.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/videoMP4-page.pug',
+      filename: './videoMP4-page.html'
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'

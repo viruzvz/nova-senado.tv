@@ -51,3 +51,8 @@ $(document).ready(function () {
     }
   })
 })
+
+// FOCUS NO INPUT QUANDO CARREGA MODAL
+$('#busca-modal').on('shown.bs.modal', function () {
+  $('.modalinput').trigger('focus')
+})

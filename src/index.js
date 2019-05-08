@@ -8,6 +8,7 @@ import 'videojs-hotkeys'
 import videojs from 'video.js'
 import './js/main'
 import Stickyfill from 'stickyfilljs'
+import './js/ytvideo'
 var elements = $('.stickyIE')
 Stickyfill.add(elements)
 

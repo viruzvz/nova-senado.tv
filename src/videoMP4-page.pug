@@ -1,0 +1,14 @@
+extends index.pug
+block inicio
+  a.nav-link.link--cut.current(href='/home.html') Início
+block content
+  .bg-gray-fox.pt-3
+    .container
+      include componentes/content-video.pug
+        block include
+          section.videowrapper.ytvideo.col-12.mb-3
+            include componentes/videojs-mp4.pug
+  .divider.bg-blue-play
+  .bg-gray-dark
+    include componentes/navsec.pug
+    include componentes/cards.pug

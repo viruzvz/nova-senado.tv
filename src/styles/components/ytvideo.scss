@@ -1,16 +1,16 @@
 
-.green {
-    position: fixed;
-    right: 10px;
-    max-width: 250px;
-    z-index: 1;
-}
+// .green {
+//     position: fixed;
+//     right: 10px;
+//     max-width: 250px;
+//     z-index: 1;
+// }
 section.videowrapper {
     position: relative;
-    height: 0;
-    padding-bottom: 56.25%;
-    margin-bottom: 50px;
-    background: #000;
+    // height: 0;
+    // padding-bottom: 56.25%;
+    // margin-bottom: 50px;
+    // background: #000;
 }
 
 .videowrapper iframe,.videowrapper video {
@@ -73,10 +73,10 @@ h1.play-video {
     }
 }
 
-section.main-wrapper {
-    max-width: 760px;
-    margin: 0 auto;
-}
+// section.main-wrapper {
+//     max-width: 760px;
+//     margin: 0 auto;
+// }
 
 section.level {
     display: flex;
@@ -90,46 +90,46 @@ section.level {
     margin-bottom: 50px;
 }
 
-section.level.one {
-    background: #FFC300;
-    margin-top: 25px;
-}
+// section.level.one {
+//     background: #FFC300;
+//     margin-top: 25px;
+// }
 
-section.level.two {
-    background: #C70039;
-}
+// section.level.two {
+//     background: #C70039;
+// }
 
-section.level.three {
-    background: #FF5733;
-}
+// section.level.three {
+//     background: #FF5733;
+// }
 
-section.level.four {
-    background: #C6E2FF;
-}
+// section.level.four {
+//     background: #C6E2FF;
+// }
 
-section.level.five {
-    background: #0085ca;
-}
+// section.level.five {
+//     background: #0085ca;
+// }
 
-section.level.six {
-    background: #0085ca;
-}
+// section.level.six {
+//     background: #0085ca;
+// }
 
-section.level.seven {
-    background: #C6E2FF;
-}
+// section.level.seven {
+//     background: #C6E2FF;
+// }
 
-section.level.eight {
-    background: #FF5733;
-}
+// section.level.eight {
+//     background: #FF5733;
+// }
 
-section.level.nine {
-    background: #C70039;
-}
+// section.level.nine {
+//     background: #C70039;
+// }
 
-section.level.ten {
-    background: #FFC300;
-}
+// section.level.ten {
+//     background: #FFC300;
+// }
 
 .close-button {
     position: fixed;
@@ -139,6 +139,7 @@ section.level.ten {
     bottom: 175px;
     top: auto;
     left: auto;
+    z-index: 2;
     -webkit-animation-name: fadeInUp;
     animation-name: fadeInUp;
     -webkit-animation-duration: 1s;
