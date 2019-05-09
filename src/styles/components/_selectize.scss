@@ -1,0 +1,14 @@
+.selectize-input {
+    border:none !important;
+    border-radius: 0 !important;
+    background-color: $gray-fox !important;
+    padding: 9px !important;
+    &:focus, &:active, &:focus-within {
+        background-color: $gray-basic !important;
+    }
+    input {
+        color: $cut !important;
+        font-size: $xregular !important;
+        font-weight: 400 !important;
+    }
+}

@@ -20,14 +20,14 @@ block content
                 i.fa.fa-calendar 
                 | &nbsp; Data inicial / final
               .input-group.bg-gray-fox
-                input#date-search.form-control.flatpickr-input.active(value='', type='text', readonly='readonly')
+                input#date-search.form-control.flatpickr.flatpickr-input(value='', type='text', readonly='readonly')
           .col-sm-8
             .form-group
               label.white 
                 i.fa.fa-tags 
                 | &nbsp; Tags
               .input-group.bg-gray-fox
-                input#date-search.form-control(value='', type='text')
+                input.select-tag.form-control.p-0(type='text')
         .position-relative.row.form-group
           .text-right.col-sm-12
             button.btn.btn-outline-primary(type='button') Buscar

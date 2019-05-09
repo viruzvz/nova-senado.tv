@@ -19,8 +19,7 @@
 @import '/components/btnfixed';
 @import '/components/navglobal';
 // @import "~video-react/styles/scss/video-react";
-// @import '~flatpickr/dist/themes/dark';
-// @import '~react-bootstrap-typeahead/css/Typeahead';
+@import '~flatpickr/dist/themes/dark';
 @import '/components/flatpickr-dark';
 @import '/components/typeahead';
 @import '/components/carousel';
@@ -28,6 +27,7 @@
 @import '/components/toggle-arrow';
 @import '/components/hero';
 @import '/components/videojs';
+@import '/components/selectize';
 .row-hidden {
     display: none;
     opacity: 0;
