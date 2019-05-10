@@ -154,6 +154,10 @@ module.exports = {
       template: './src/busca.pug',
       filename: './busca.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/duvidas.pug',
+      filename: './duvidas.html'
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'

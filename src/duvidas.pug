@@ -1,0 +1,138 @@
+extend index.pug
+block content
+  .bg-gray-dark
+    .py-3.container.js-scroll-grade
+      .row
+        .col
+          h1.shadowc.white.size--large.text-uppercase Principais Dúvidas
+          p.cut.size--small.text-justify
+    .divider.bg-blue-play
+    .py-3.container
+      .row
+        .col-12.arrows-collapse(role='1')
+          #accordionExample.accordion
+            .card.bg-gray-fox
+              #headingOne.card-header
+                a.link--blueplay(href='#', data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                  i.fa.fa-question-circle
+                  |    Como faço para solicitar cópia de um programa da TV Senado?
+              #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#accordionExample', style='')
+                .cut.p-3
+                  | A TV Senado autoriza cópia em DVD de programas que não tenham nenhuma restrição quanto a direitos autorais. Para solicitar, mande um e-mail para 
+                  a(href='mailto:stelaq@senado.leg.br') stelaq@senado.leg.br
+                  | , ou faça o pedido pelo telefone 
+                  a(href='tel:(61) 3303 3900') (61) 3303 3900
+                  | .
+            .card.bg-gray-fox
+              #headingTwo.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                  i.fa.fa-question-circle
+                  |    Como baixar os vídeos (fazer download) da página da TV Senado?
+              #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#accordionExample')
+                .cut.p-3
+                  | Todo o acervo da TV Senado está publicado no YouTube. Para fazer o download dos arquivos, acesse 
+                  a(href='https://www.youtube.com/TVSenado', target='_blank') youtube.com/TVSenado
+                  |  e escolha a melhor forma de baixar os vídeos que escolher.
+            .card.bg-gray-fox
+              #headingThree.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                  i.fa.fa-question-circle
+                  |    Por que a TV Senado corta o áudio de senadores quando eles estão discursando?
+              #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#accordionExample')
+                .cut.p-3
+                  | A TV Senado não tem nenhuma gerência no corte de áudio durante as atividades parlamentares. O Regimento Interno do Senado estabelece a duração do uso da palavra pelos senadores durante as sessões plenárias. Quando esse tempo é ultrapassado, toca uma campainha para avisar ao parlamentar que é preciso concluir o discurso. Se o parlamentar não concluir, o áudio é cortado automaticamente. Cabe ao presidente da Mesa liberar o áudio e conceder mais tempo para o orador na tribuna.
+            .card.bg-gray-fox
+              #headingfour.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapsefour', aria-expanded='false', aria-controls='collapsefour')
+                  i.fa.fa-question-circle
+                  |    Por que a TV Senado interrompe uma comissão para transmitir outra reunião?
+              #collapsefour.collapse(aria-labelledby='headingfour', data-parent='#accordionExample')
+                .cut.p-3
+                  | O Regimento Interno do Senado estabelece dias e horários das reuniões das comissões. A Comissão Diretora do Senado, no Ato nº 21, de 2009, estabelece as normas para cobertura das atividades legislativas e eventos ocorridos no Senado Federal e no Congresso Nacional. A TV Senado segue essas orientações para definir as veiculações ao vivo. Todos os eventos legislativos são transmitidos ao vivo pela página da emissora na internet e gravados para posterior veiculação na emissora.
+            .card.bg-gray-fox
+              #headingfive.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapsefive', aria-expanded='false', aria-controls='collapsefive')
+                  i.fa.fa-question-circle
+                  |    Como ter acesso à pauta e aos resultados das reuniões das comissões e do Plenário?
+              #collapsefive.collapse(aria-labelledby='headingfive', data-parent='#accordionExample')
+                .cut.p-3
+                  | No Portal das Comissões é possível acessar todas as informações sobre os órgãos colegiados, tais como: Pauta, Pauta cheia (pauta com o detalhamento dos projetos), Resultado, Notas Taquigráficas (degravação do debate ocorrido na reunião), Ata, Documentos diversos (apresentações em Power Point utilizadas por convidados das Audiências Públicas).
+                  br
+                  | *Os textos e áudios das reuniões das comissões podem ser acessados em: 
+                  a(target='_blank', href='http://legis.senado.leg.br/comissoes') http://legis.senado.leg.br/comissoes
+                  br
+                  | *Os textos das sessões plenárias podem ser acessados em: 
+                  a(target='_blank', href='https://www25.senado.leg.br/web/atividade/sessao-plenaria') https://www25.senado.leg.br/web/atividade/sessao-plenaria
+            .card.bg-gray-fox
+              #headingsix.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapsesix', aria-expanded='false', aria-controls='collapsesix')
+                  i.fa.fa-question-circle
+                  |    Como faço para encaminhar mensagem para o programa Senado Interativo?
+              #collapsesix.collapse(aria-labelledby='headingsix', data-parent='#accordionExample')
+                .cut.p-3
+                  | Pelo telefone: 0800 612211 (ligação gratuita)
+                  br
+                  | Pelo Facebook: 
+                  a(href='https://www.facebook.com/tvsenado', target='_blank') facebook.com/tvsenado
+            .card.bg-gray-fox
+              #headingseven.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapseseven', aria-expanded='false', aria-controls='collapseseven')
+                  i.fa.fa-question-circle
+                  |    Posso enviar um documentário para exibição na TV Senado?
+              #collapseseven.collapse(aria-labelledby='headingseven', data-parent='#accordionExample')
+                .cut.p-3
+                  | Sim. O material será avaliado do ponto de vista editorial e técnico. A primeira cópia pode ser em DVD. Envie para o endereço:
+                  br
+                  | TV SENADO – PROGRAMAÇÃO
+                  br
+                  | A/C Tiago Macini
+                  br
+                  | Senado Federal
+                  br
+                  | Via N2 - Anexo II - Bloco B – Subsolo
+                  br
+                  | Brasília - DF CEP: 70165-920
+            .card.bg-gray-fox
+              #headingeight.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapseeight', aria-expanded='false', aria-controls='collapseeight')
+                  i.fa.fa-question-circle
+                  |    Como saber quando uma reunião de comissão será reapresentada da TV Senado?
+              #collapseeight.collapse(aria-labelledby='headingeight', data-parent='#accordionExample')
+                .cut.p-3
+                  | A Tabela Diária da Programação da TV Senado está sujeita à duração das atividades parlamentares. Portanto, ela pode mudar ao longo do dia. Ela pode ser acessada aqui: (inserir link da programação). Dúvidas sobre a programação podem ser tiradas pelo telefone 
+                  a(href='tel:(61) 3303 4647') (61) 3303 4647
+                  | .
+            .card.bg-gray-fox
+              #headingnine.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapsenine', aria-expanded='false', aria-controls='collapsenine')
+                  i.fa.fa-question-circle
+                  |    Como ter acesso à programação de fim de semana da TV Senado?
+              #collapsenine.collapse(aria-labelledby='headingnine', data-parent='#accordionExample')
+                .cut.p-3
+                  | A programação é publicada na página da emissora na sexta-feira. Veja aqui: 
+                  a(href='/programacao')
+                    em programação
+            .card.bg-gray-fox
+              #headingten.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapseten', aria-expanded='false', aria-controls='collapseten')
+                  i.fa.fa-question-circle
+                  |    Por que o sinal da TV Senado não é aberto para todo o país?
+              #collapseten.collapse(aria-labelledby='headingten', data-parent='#accordionExample')
+                .cut.p-3
+                  | O sinal da TV Senado está disponível em todo o país por transmissão via satélite, com recepção via antena parabólica. A abertura do sinal via antenas retransmissoras depende de dotações orçamentárias a serem previstas no Orçamento Anual do Senado.
+            .card.bg-gray-fox
+              #headingeleven.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapseeleven', aria-expanded='false', aria-controls='collapseeleven')
+                  i.fa.fa-question-circle
+                  |    Como ter acesso à multiprogramação da TV Senado Digital?
+              #collapseeleven.collapse(aria-labelledby='headingeleven', data-parent='#accordionExample')
+                .cut.p-3
+                  | A multiprogramação na TV Senado Digital acontece apenas para o Distrito Federal. Não há previsão de expansão da multiprogramação digital para o restante do país.
+            .card.bg-gray-fox
+              #headingtwelve.card-header
+                a.link--blueplay.collapsed(href='#', data-toggle='collapse', data-target='#collapsetwelve', aria-expanded='false', aria-controls='collapsetwelve')
+                  i.fa.fa-question-circle
+                  |    Por que a TV Senado não usa interprete de libras e legendas em sua programação?
+              #collapsetwelve.collapse(aria-labelledby='headingtwelve', data-parent='#accordionExample')
+                .cut.p-3
+                  | A TV Senado cumpre a legislação relativa à acessibilidade por meio do serviço de legenda oculta (closed caption), também previsto na Lei 10.098, de 19/12/2000. Atualmente, a TV Senado faz a inserção das legendas 24 horas por dia.
