@@ -2,12 +2,16 @@ nav.navbar.black.navbar-expand-md.navbar-play
   a.navbar-brand(href='#')
     img.img-fluid(src='../assets/logo.svg' alt='TV Senado' style='width:100px; height: 43px')
   .text-right
-    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
-      span.navbar-toggler-icon
+    .float-right
+      button.navbar-toggler.btn.size--smiddle.mt-2(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+        i.link--cut.fa.fa-bars
+    .float-right.d-block.d-md-none
+      button.btn.negative-gutter--right.size--smiddle.mr-3(type='button', data-toggle="modal" data-target="#busca-modal")
+        i.link--cut.fa.fa-search
   #navbarNavAltMarkup.collapse.navbar-collapse
     include nav.pug
     include ../componentes/social-network.pug
     ul.ml-auto.navbar-nav
-      div
+      div.d-none.d-md-block
         button.btn.negative-gutter--right.size--smiddle(type='button', data-toggle="modal" data-target="#busca-modal")
           i.link--cut.fa.fa-search

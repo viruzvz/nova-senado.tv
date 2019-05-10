@@ -55,6 +55,13 @@ flatpickr('.flatpickr-input', {
   static: false
 })
 
+// Flatpickr componente de data setado na página de programação
+flatpickr('.flatpickr-input-agenda', {
+  locale: Portuguese,
+  minDate: '2017-01-01',
+  dateFormat: 'd-m-Y'
+})
+
 // Polyfill para position:sticky funcionar no IE
 var elements = $('.stickyIE')
 Stickyfill.add(elements)
