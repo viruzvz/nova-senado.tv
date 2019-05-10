@@ -40,7 +40,7 @@ $(document).ready(function () {
     e.preventDefault()
     exibirDuasLinhas.call($(this).closest('.video-list'))
     if ($(this).closest('.video-list').find('.row-hidden:not(.row-flex)').length === 0) {
-      console.log('aqui')
+      $(this).closest('.video-list').find('.show-btn').text('Buscar').attr('onclick', 'window.location.href = "./busca.html";')
     }
   })
 })
