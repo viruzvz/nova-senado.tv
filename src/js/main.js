@@ -1,6 +1,20 @@
 import $ from 'jquery'
 // Adiciona scrollspy na navbar secundária
-$(document).ready(function () {
+
+const onHashChange = _ => {
+  const classTarget = window.location.hash.substr(1)
+  const $target = $(`.js-scroll-${classTarget}`)
+
+  if ($target.length > 0) {
+    $('html, body').animate({ scrollTop: $target.offset().top }, 800)
+  }
+}
+
+// $(window).on('hashchange', onHashChange)
+
+$(_ => {
+  onHashChange()
+
   $('body').scrollspy({
     target: '#spy',
     offset: 70
