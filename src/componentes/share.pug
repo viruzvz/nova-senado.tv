@@ -4,45 +4,34 @@
       i.fa.fa-share
       |  COMPARTILHAR
     .dropdown-menu(tabindex='-1', role='menu', aria-hidden='true' aria-labelledby="dropdownMenuButton")
-      ul.list-unstyled.mb-0
+      ul.list-unstyled.mb-0.js-socialbar 
         li.size--regular.dropdown-item
-          .row
-            .col-md-8
-              .SocialMediaShareButton.SocialMediaShareButton--facebook.iconpull-left.p-1.button(role='button', tabindex='0')
-                i.fa.fa-facebook
-                |   Facebook
-            .col
+          a.iconpull-left.p-1a.js-popup(target='_blank', href='https://facebook.com/sharer.php?u=https%3A%2F%2Fwww12.senado.leg.br%2Fnoticias%2Fmaterias%2F2019%2F05%2F12%2Fem-100-dias-de-legislatura-senado-bate-recorde-de-producao-legislativa%3Futm_medium%3Dshare-button%26utm_source%3Dfacebook')
+            i.fa.fa-facebook
+            |  Facebook
         li.size--regular.dropdown-item
-          .SocialMediaShareButton.SocialMediaShareButton--twitter.iconpull-left.p-1.button(role='button', tabindex='0')
+          a.iconpull-left.p-1.js-popup(target='_blank', href='https://twitter.com/share?url=https%3A%2F%2Fwww12.senado.leg.br%2Fnoticias%2Fmaterias%2F2019%2F05%2F12%2Fem-100-dias-de-legislatura-senado-bate-recorde-de-producao-legislativa%3Futm_medium%3Dshare-button%26utm_source%3Dtwitter&text=Em%20100%20dias%20de%20Legislatura%2C%20Senado%20bate%20recorde%20de%20produ%C3%A7%C3%A3o%20legislativa')
             i.fa.fa-twitter
             |  Twitter
-        //- li.size--regular.dropdown-item
-        //-   .row
-        //-     .col-md-8
-        //-       .SocialMediaShareButton.SocialMediaShareButton--googlePlus.iconpull-left.p-1.button(role='button', tabindex='0')
-        //-         i.fa.fa-google-plus-official
-        //-         |  Google Plus
-        //-     .col
         li.size--regular.dropdown-item
-          .row
-            .col-md-8
-              .SocialMediaShareButton.SocialMediaShareButton--linkedin.iconpull-left.p-1.button(role='button', tabindex='0')
-                span.linkedin.bg-white.size--milli.black in
-                |  Linkedin
-            .col
+          a.iconpull-left.p-1.js-popup(target='_blank', href='https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww12.senado.leg.br%2Fnoticias%2Fmaterias%2F2019%2F05%2F12%2Fem-100-dias-de-legislatura-senado-bate-recorde-de-producao-legislativa%3Futm_medium%3Dshare-button%26utm_source%3Dtwitter&text=Em%20100%20dias%20de%20Legislatura%2C%20Senado%20bate%20recorde%20de%20produ%C3%A7%C3%A3o%20legislativa')
+            span.linkedin.bg-white.size--milli.black in
+            |  Linkedin
         li.size--regular.dropdown-item.d-block.d-md-none
-          .SocialMediaShareButton.SocialMediaShareButton--whatsapp.iconpull-left.p-1.button(role='button', tabindex='0')
+          a.iconpull-left.p-1.js-popup(data-action='share/whatsapp/share', href='whatsapp://send?text=Em%20100%20dias%20de%20Legislatura%2C%20Senado%20bate%20recorde%20de%20produ%C3%A7%C3%A3o%20legislativa%0A%0Ahttps%3A%2F%2Fwww12.senado.leg.br%2Fnoticias%2Fmaterias%2F2019%2F05%2F12%2Fem-100-dias-de-legislatura-senado-bate-recorde-de-producao-legislativa%3Futm_medium%3Dshare-button%26utm_source%3Dwhatsapp')
             i.fa.fa-whatsapp
             |  Whatsapp
-        li.size--regular.dropdown-item.d-block.d-md-none
-          .SocialMediaShareButton.SocialMediaShareButton--telegram.iconpull-left.p-1.button(role='button', tabindex='0')
-            i.fa.fa-telegram
-            |  Telegram
+        //- li.size--regular.dropdown-item.d-block.d-md-none
+        //-   .SocialMediaShareButton.SocialMediaShareButton--telegram.iconpull-left.p-1.button(role='button', tabindex='0')
+        //-     i.fa.fa-telegram
+        //-     |  Telegram
         li.size--regular.dropdown-item
-          .SocialMediaShareButton.SocialMediaShareButton--email.iconpull-left.p-1.button(role='button', tabindex='0')
+          a.iconpull-left.p-1(href="mailto:?Subject=Link compartilhado&amp;Body=Eu%20vi%20isso%20e%20lembrei%20de%20você!%20 https://globo.com", role='button', tabindex='0')
             i.fa.fa-envelope
             |  E-mail
         li.size--regular.dropdown-item
-          button.size--regular.dropdown-item.dropdown-item(type='button', tabindex='0')
-            i.fa.fa-copy
-            input#input-compartilhar(type='text', name='copy', readonly='', placeholder='https://youtu.be/ROoAf5JU88A', value='https://youtu.be/ROoAf5JU88A')
+          button.size--regular.dropdown-item#copy(type='button', tabindex='0' value="Copy Url" title='Cpiar Link')
+            i.fa.fa-copy.mr-2
+            input#url(type='text' value='url')
+
+        

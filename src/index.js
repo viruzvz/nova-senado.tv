@@ -12,7 +12,9 @@ import './js/ytvideo'
 import flatpickr from 'flatpickr'
 import { Portuguese } from 'flatpickr/dist/l10n/pt.js'
 import 'selectize'
+import 'babel-polyfill'
 
+// Na página de busca componente multi select tags
 $('.select-tag').selectize({
   delimiter: ',',
   persist: false,
@@ -77,13 +79,41 @@ $(window).on('scroll', function () {
   }
 })
 
+// Componente que cria popup e compartilha nas redes sociais. 
+$(function () {
+  $(document.body).on('click', '.js-socialbar .js-popup', function (ev) {
+    ev.preventDefault()
+    var $this = $(this)
+    var url = this.href
+    var $w = $(window)
+    var settings = {
+      height: $this.data('height') || 300,
+      width: $this.data('width') || 700
+    }
+    var y = ($w.height() - settings.height) / 2
+    var x = ($w.width() - settings.width) / 2
+    window.open(url, '', 'width=' + settings.width + ', height=' + settings.height + ', left=' + x + ',top=' + y).focus()
+  })
+})
+
 // Adiciona controle via teclado no vídeo MP4
-videojs('#my-video').ready(function () {
-  this.hotkeys({
-    volumeStep: 0.1,
-    seekStep: 5,
-    enableModifiersForNumbers: false,
-    enableMute: true,
-    enableVolumeScroll: true
+if ($('#my-video').length > 0) {
+  videojs('#my-video').ready(function () {
+    this.hotkeys({
+      volumeStep: 0.1,
+      seekStep: 5,
+      enableModifiersForNumbers: false,
+      enableMute: true,
+      enableVolumeScroll: true
+    })
+  })
+}
+
+// Componente share, carrega link da pagina e ao clicar executa função de ctrl-c
+$(document).ready(function () {
+  $('#url').val(window.location.href)
+  $('#copy').click(function () {
+    $('#url').select()
+    document.execCommand('copy')
   })
 })

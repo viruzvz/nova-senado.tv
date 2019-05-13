@@ -1,5 +1,5 @@
 .carousel-play {
-	min-height: 60vh;
+	// min-height: 60vh;
 	.carousel-indicators {
 		top:30px;
 		bottom: inherit;
@@ -21,6 +21,12 @@
 				font-size: $large;
 			}
 		}
+	}
+	.absolut-caption {
+		position: absolute;
+		left: 15%;
+		top: 15%;
+		line-height: 0.6;
 	}
 }
 .u-Relative {
@@ -49,7 +55,7 @@
 }
 @include media-breakpoint-down(md) { 
 	.carousel-play {
-		min-height: 50vh;
+		// min-height: 50vh;
 		.carousel-item {
 			.carousel-caption {
 				left: 5%;

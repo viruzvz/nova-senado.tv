@@ -1,0 +1,66 @@
+#barra-conteudo
+  h5.hiddenStructure Visões
+  ul#content-views.contentViews
+    li#contentview-folderContents.plain
+      a(href='http://localhost:8080/tv/folder_contents') Conteúdo
+    li#contentview-view.selected
+      a(href='http://localhost:8080/tv') Visão
+    li#contentview-contentrules.plain
+      a(href='http://localhost:8080/tv/@@manage-content-rules') Regras
+    li#contentview-local_roles.plain
+      a(href='http://localhost:8080/tv/@@sharing') Compartilhamento
+  .contentActions
+    ul#contentActionMenus
+      li
+        dl#plone-contentmenu-factories.actionMenu.deactivated
+          dt.actionMenuHeader.label-
+            a(href='http://localhost:8080/tv/folder_factories', title='Adiciona novos itens dentro deste item')
+              span Adicionar item...
+              span.arrowDownAlternative ▼
+          dd.actionMenuContent
+            ul
+              li
+                a#topic.contenttype-topic(href='http://localhost:8080/tv/createObject?type_name=Topic', title='Uma pesquisa salva, sempre atualizada, que pode ser usada para exibir itens que correspondem aos critérios que você especificar.')
+                  span.subMenuTitle Coleção
+              li
+                a#tv-episodio.contenttype-tv-episodio(href='http://localhost:8080/tv/++add++tv.episodio', title='')
+                  img(width='16', height='16', alt='', src='http://localhost:8080/tv/++resource++senado.tv/img/icons/episodio.png', title='')
+                  span.subMenuTitle Episódio
+              li
+                a#image.contenttype-image(href='http://localhost:8080/tv/createObject?type_name=Image', title='Iimagens que podem ser referenciadas em páginas ou exibidas em um álbum.')
+                  span.subMenuTitle Imagem
+              li
+                a#folder.contenttype-folder(href='http://localhost:8080/tv/createObject?type_name=Folder', title='')
+                  img(width='16', height='16', alt='', src='http://localhost:8080/tv/++resource++senado.tv/img/icons/folder.png', title='')
+                  span.subMenuTitle Pasta
+              li
+                a#document.contenttype-document(href='http://localhost:8080/tv/createObject?type_name=Document', title='')
+                  span.subMenuTitle Página
+      li
+        dl#plone-contentmenu-display.actionMenu.deactivated
+          dt.actionMenuHeader.label-
+            a(href='http://localhost:8080/tv/select_default_view', title='Selecione o modo de visualização padrão para esta pasta, ou defina um item de conteúdo como sua exibição padrão.')
+              span Exibição
+              span.arrowDownAlternative ▼
+          dd.actionMenuContent
+            ul
+              li
+                a#folder_listing(href='http://localhost:8080/tv/selectViewTemplate?templateId=folder_listing', title='')
+                  span.subMenuTitle Visão Padrão
+              li
+                a#folder_summary_view(href='http://localhost:8080/tv/selectViewTemplate?templateId=folder_summary_view', title='')
+                  span.subMenuTitle Visão Sumária
+              li
+                a#folder_full_view(href='http://localhost:8080/tv/selectViewTemplate?templateId=folder_full_view', title='')
+                  span.subMenuTitle Todo conteúdo
+              li
+                a#folder_tabular_view(href='http://localhost:8080/tv/selectViewTemplate?templateId=folder_tabular_view', title='')
+                  span.subMenuTitle Visão Tabular
+              li
+                a#atct_album_view(href='http://localhost:8080/tv/selectViewTemplate?templateId=atct_album_view', title='')
+                  span.subMenuTitle Visão de Miniaturas
+              li.actionSeparator
+                a#contextSetDefaultPage(href='http://localhost:8080/tv/select_default_page', title='Selecione um item para ser usado como visualização padrão nesta pasta...')
+                  span.subMenuTitle
+                    | Selecionar um item
+                    | como visão padrão…
