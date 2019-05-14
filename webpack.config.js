@@ -162,6 +162,10 @@ module.exports = {
       template: './src/duvidas.pug',
       filename: './duvidas.html'
     }),
+    new HtmlWebpackPlugin({
+      template: './src/videoMP4-page-vertical.pug',
+      filename: './videoMP4-page-vertical.html'
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash:5].css'
     })
