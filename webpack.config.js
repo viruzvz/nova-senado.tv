@@ -4,7 +4,6 @@ const webpack = require('webpack')
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const CopyPlugin = require('copy-webpack-plugin')
-const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
 
@@ -106,7 +105,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new CopyPlugin([
       { from: 'src/assets/', to: 'assets' }
     ]),

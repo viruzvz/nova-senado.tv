@@ -117,3 +117,7 @@ $(document).ready(function () {
     document.execCommand('copy')
   })
 })
+
+$('#carouselExampleFade').on('slide.bs.carousel', function () {
+  if ($(this).children('div').length === 1) $(this).siblings('.carousel-control, .carousel-indicators').hide()
+})
