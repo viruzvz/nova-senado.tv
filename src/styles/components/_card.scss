@@ -1,3 +1,48 @@
+.card-play {
+  height: 100%;
+}
+.card-effect {
+  position: relative; 
+  overflow: hidden; 
+  background-color: $black;
+  img {
+    max-width: 100%;
+    transition: all 0.3s;
+  }
+  .card-text {
+    color: $cut;
+  }
+  &:hover {
+    .card-text {
+      color: $gray-default;
+    }
+    text-decoration: none;
+    .hoverplay {
+      opacity: 1;
+      z-index: 1;
+    }
+    img {
+      transform: scale(1.1);
+    }
+    background-color: $white;
+  }
+	.hoverplay {
+		@extend %hover-default;
+		.fa-stack {
+			width: 5em;
+			height: 1em;
+		}
+	}
+	.card-circle {
+		border-radius: 50%;
+	}
+	.top {
+		top: 22%;
+	}
+	.middle {
+		top: 50%;
+	}
+}
 .card-overley {
 	position: relative;
  	img {

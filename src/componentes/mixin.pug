@@ -1,12 +1,12 @@
 mixin card(classes, href, src, time, record, txt, txt1, txt2)
-  .cut.mb-4.card-overley(class= classes)
-    a(href= href).dp-change-main-video.card.rounded-0.border-0.link--card
-      .embed-x.Embed--3by2
+  .mb-4(class= classes)
+    a(href= href).card.card-play.card-effect
+      .embed-responsive
+        img.rounded-0.card-img(src= src alt='card')
         .hoverplay.middle
           .fa-stack
             i.fa.fa-circle.fa-stack-1x.cut.size--large.ml-1
             i.fa.fa-play-circle.fa-stack-1x.gray-dark.size--xlarge
-        img.rounded-0.card-img(src= src alt='card')
       if time
         time.timer.bg-black.px-2.white(text='1:53:33') 1:53:33
       else

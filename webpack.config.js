@@ -4,12 +4,15 @@ const webpack = require('webpack')
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const CopyPlugin = require('copy-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+
+const isDev = process.env.NODE_ENV === 'development'
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash:5].bundle.js',
     publicPath: '/'
   },
   devServer: {
@@ -47,13 +50,13 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader',
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
             options: {
               sourceMap: true,
-              plugins: () => [autoprefixer()] 
+              plugins: () => [autoprefixer()]
             }
           },
           'sass-loader'
@@ -63,7 +66,7 @@ module.exports = {
         test: /\.less$/,
         exclude: /node_modules/,
         use: [
-          'style-loader',
+          isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -103,6 +106,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new CopyPlugin([
       { from: 'src/assets/', to: 'assets' }
     ]),
@@ -159,8 +163,7 @@ module.exports = {
       filename: './duvidas.html'
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
+      filename: '[name].[contenthash:5].css'
     })
   ]
 }
