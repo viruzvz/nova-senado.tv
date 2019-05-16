@@ -1,6 +1,5 @@
 import './styles/main.scss'
 import './styles/main.less'
-import $ from 'jquery'
 import 'popper.js'
 import 'jquery-parallax.js'
 import 'bootstrap'
@@ -13,6 +12,9 @@ import flatpickr from 'flatpickr'
 import { Portuguese } from 'flatpickr/dist/l10n/pt.js'
 import 'selectize'
 import 'babel-polyfill'
+import $ from 'jquery'
+window.jQuery = $
+window.$ = $
 
 // Na página de busca componente multi select tags
 $('.select-tag').selectize({
@@ -122,6 +124,3 @@ $(document).ready(function () {
 $('.carousel-inner').each(function () {
   if ($(this).children('div').length === 1) $(this).siblings('.carousel-indicators, .carousel-control-prev, .carousel-control-next').hide()
 })
-
-window.jQuery = $;
-window.$ = $;
