@@ -70,17 +70,6 @@ flatpickr('.flatpickr-input-agenda', {
 var elements = $('.stickyIE')
 Stickyfill.add(elements)
 
-// Adiciona background na (navsec, componente navbar que vem antes dos cards) quando atinge a altura do sticky
-var mainbottom = $('.menuStick').offset().top + $('.menuStick').height()
-$(window).on('scroll', function () {
-  const stop = Math.round($(window).scrollTop())
-  if (stop > mainbottom) {
-    $('.menuStick').addClass('sticky')
-  } else {
-    $('.menuStick').removeClass('sticky')
-  }
-})
-
 // Componente que cria popup e compartilha nas redes sociais. 
 $(function () {
   $(document.body).on('click', '.js-socialbar .js-popup', function (ev) {
