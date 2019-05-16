@@ -5,4 +5,21 @@ block content
   include componentes/hero.pug
   .divider.bg-blue-play
   .bg-gray-dark
-    include componentes/navsec.pug
+    .container
+      .row
+        .col-md-12
+          form.busca
+            .row
+              .col-md-6
+                .form-group
+                  label.white(for="") Legislatura
+                  select.form-control()
+                    option(value="") Legislatura atual
+                    option(value="") Legislatura x
+                    option(value="") Legislatura y
+              .col-md-6  
+                .form-group
+                  label.white(for="") Senadores
+                  select.form-control()
+                    option(value="") 1
+                    option(value="") 2

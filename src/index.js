@@ -118,6 +118,7 @@ $(document).ready(function () {
   })
 })
 
-$('#carouselExampleFade').on('slide.bs.carousel', function () {
-  if ($(this).children('div').length === 1) $(this).siblings('.carousel-control, .carousel-indicators').hide()
+// Esconder controles do carousel quando tiver apenas um slide.
+$('.carousel-inner').each(function () {
+  if ($(this).children('div').length === 1) $(this).siblings('.carousel-indicators, .carousel-control-prev, .carousel-control-next').hide()
 })

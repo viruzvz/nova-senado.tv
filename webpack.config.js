@@ -10,7 +10,7 @@ const isDev = process.env.NODE_ENV === 'development'
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, './tv/dist'),
     filename: '[name].[contenthash:5].bundle.js',
     publicPath: '/'
   },
