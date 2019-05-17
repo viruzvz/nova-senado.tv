@@ -1,25 +1,52 @@
 extends index.pug
+include componentes/mixin.pug
 block senadores
   a.nav-link.link--cut.current(href='/senadores.html') Senadores
 block content
   include componentes/hero.pug
   .divider.bg-blue-play
-  .bg-gray-dark
+  .bg-gray-dark.pt-4.pb-4
     .container
       .row
         .col-md-12
+          .mb-4.text-left.row
+            .col
+              p.border-bottom.white.m-0.pb-2 
+                i.fa.fa-search
+                | &nbsp; BUSCA POR SENADOR
           form.busca
             .row
               .col-md-6
                 .form-group
-                  label.white(for="") Legislatura
+                  label.white(for="") 
+                    i.fa.fa-calendar-check-o 
+                    | &nbsp; Legislatura
                   select.form-control()
                     option(value="") Legislatura atual
                     option(value="") Legislatura x
                     option(value="") Legislatura y
               .col-md-6  
                 .form-group
-                  label.white(for="") Senadores
-                  select.form-control()
-                    option(value="") 1
-                    option(value="") 2
+                  label.white(for="") 
+                    i.fa.fa-user 
+                    | &nbsp; Senadores
+                  .input-group.bg-gray-fox
+                    input.select-tag.form-control.p-0(type='text')
+  .border.white
+  .pb-2.container.pt-4
+    .row
+      .col
+        p.border-bottom.white.m-0.pb-2 Resultado da Busca
+  .position-relative.pb-6.container
+    #resultado-da-busca
+      .row
+          +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=1','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+          +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=2','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+          +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=3','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+          +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=4','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      .row
+          +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=5','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+          +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=6','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+          +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=7','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+          +card('col-sm-3 col-md-3 col-lg-3', './youtube-page-vertical.html','https://picsum.photos/800/600?random=8','record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+

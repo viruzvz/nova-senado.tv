@@ -145,21 +145,21 @@ body {
 .minimum-sticky-4by3 {
 	min-height: 565px;
 }
-.is-sticky {
-  position: fixed;
-  right: 3px;
-  bottom: 3px;
-  top: auto;
-  left: auto;
-  max-width: 280px;
-  max-height: 158px;
-  width: 280px;
-  height: 158px;
-  animation-name: fadeInUp;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-  z-index: 1;
-}
+// .is-sticky {
+//   position: fixed;
+//   right: 3px;
+//   bottom: 3px;
+//   top: auto;
+//   left: auto;
+//   max-width: 280px;
+//   max-height: 158px;
+//   width: 280px;
+//   height: 158px;
+//   animation-name: fadeInUp;
+//   animation-duration: 1s;
+//   animation-fill-mode: both;
+//   z-index: 1;
+// }
 
 @-webkit-keyframes fadeInUp {
     0% {
