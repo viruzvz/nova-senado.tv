@@ -1,0 +1,29 @@
+.box-live {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+.box-absolute {
+    position: absolute;
+}
+.box-fixed {
+    position: fixed;
+}
+.box-b {
+    bottom: 0;
+}
+.box-l {
+    left: 0;
+}
+.box-r {
+    right: 0;
+}
+.box-load {
+    animation-name: fadeInBottom;
+}
+@keyframes fadeInBottom{
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}

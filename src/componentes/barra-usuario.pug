@@ -1,82 +1,138 @@
-nav#admin-bar.navbar.navbar-default.navbar-fixed-top
-  .container
-    ul.nav.navbar-nav
-      li.dropdown
-        a(href='http://localhost:8080/tv/++add++tv.episodio')
-          strong Novo Episódio
-      li.dropdown
-        a.dropdown-toggle(href='#', data-toggle='dropdown')
+//- nav#admin-bar.navbar.navbar-expand-lg.navbar-lightbg-light
+//-   .container
+//-     ul.navbar-nav.mr-auto
+//-       li.dropdown
+//-         a(href='http://localhost:8080/tv/++add++tv.episodio')
+//-           strong Novo Episódio
+//-       li.dropdown.nav-item.active
+//-         a.nav-link.dropdown-toggle(href='#', data-toggle='dropdown' aria-haspopup="true" aria-expanded="false")
+//-           | Adicionar
+//-           strong.caret
+//-         .dropdown-menu
+//-           a.dropdown-item(href='http://localhost:8080/tv/plenario-e-comissoes/++add++tv.comissao')
+//-               img(width='16', height='16', src='++resource++senado.tv/img/icons/comissao.png')
+//-               |  Comissão
+//-           a.dropdown-item(href='http://localhost:8080/tv/programas/++add++tv.programa')
+//-               img(width='16', height='16', src='++resource++senado.tv/img/icons/programa.png')
+//-               |  Programa
+//-       li.dropdown.nav-item
+//-         a.dropdown-toggle(href='#', data-toggle='dropdown')
+//-           | Gerenciar
+//-           strong.caret
+//-         ul.dropdown-menu
+//-           li
+//-             a(href='http://localhost:8080/tv/plenario-e-comissoes/folder_contents?show_all=true')
+//-               | Comissões
+//-           li
+//-             a(href='http://localhost:8080/tv/programas/folder_contents?show_all=true')
+//-               | Programas
+//-           li
+//-             a(href='http://localhost:8080/tv/atualiza_tag_senador')
+//-               | Atualizar tags de senadores
+//-       li.dropdown.nav-item
+//-         a.dropdown-toggle(href='#' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+//-           | Layouts
+//-           strong.caret
+//-         .dropdown-menu
+//-           a.dropdown-item(href='http://localhost:8080/tv/layout-portal/layout-home/folder_contents')
+//-             | Home
+//-           a.dropdown-item(href='http://localhost:8080/tv/layout-portal/layout-plenario-e-comissoes/folder_contents')
+//-             | Plenário e Comissões
+//-           a.dropdown-item(href='http://localhost:8080/tv/layout-portal/layout-programas/folder_contents')
+//-             | Programas
+//-           a.dropdown-item(href='http://localhost:8080/tv/layout-portal/modelo-comissao/folder_contents')
+//-             | Modelo - Comissão
+//-           a.dropdown-item(href='http://localhost:8080/tv/layout-portal/modelo-episodio/folder_contents')
+//-             | Modelo - Episódio
+//-           a.dropdown-item(href='http://localhost:8080/tv/layout-portal/modelo-programa/folder_contents')
+//-             | Modelo - Programa
+//-       li.dropdown.nav-item
+//-         a.dropdown-toggle(href='#' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+//-           | Vocabulários
+//-           strong.caret
+//-         ul.dropdown-menu
+//-           li
+//-             a(href='http://localhost:8080/tv/portal_vocabularies/TV_Tag/folder_contents')
+//-               | Tags
+//-           li
+//-             a(href='http://localhost:8080/tv/portal_vocabularies/TV_Tema/folder_contents')
+//-               | Temas
+//-       li.dropdown.nav-item
+//-         a(href='http://localhost:8080/tv/painel')
+//-           | Painel
+//-       li.dropdown.nav-item
+//-         a(target='_blank', href='http://localhost:8080/tv/home-externa')
+//-           | Home externa
+//-     ul.nav.navbar-nav.navbar-right
+//-       li.dropdown
+//-         a.dropdown-toggle(href='#' role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+//-           | Usuário:
+//-           span cebfaria
+//-           b.caret
+//-         ul.dropdown-menu
+//-           li
+//-             a(href='logout') Sair
+
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.shadow.d-none
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    ul.navbar-nav.mr-auto
+      li.nav-item.ml-1.mr-1.ml-1.mr-1.active
+        a.btn.btn-primary(href='http://localhost:8080/tv/++add++tv.episodio')
+          i.fa.fa-plus &nbsp;
+          | Novo Episódio
+          span.sr-only (current)
+
+      li.nav-item.ml-1.mr-1.dropdown
+        a.btn.btn-light.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
           | Adicionar
-          strong.caret
-        ul.dropdown-menu
-          li
-            a(href='http://localhost:8080/tv/plenario-e-comissoes/++add++tv.comissao')
-              img(width='16', height='16', src='++resource++senado.tv/img/icons/comissao.png')
-              |  Comissão
-          li
-            a(href='http://localhost:8080/tv/programas/++add++tv.programa')
-              img(width='16', height='16', src='++resource++senado.tv/img/icons/programa.png')
-              |  Programa
-      li.dropdown
-        a.dropdown-toggle(href='#', data-toggle='dropdown')
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          a.dropdown-item(href='http://localhost:8080/tv/plenario-e-comissoes/++add++tv.comissao') Comissão
+          a.dropdown-item(href='http://localhost:8080/tv/programas/++add++tv.programa') Programa
+     
+      li.nav-item.ml-1.mr-1.dropdown
+        a.btn.btn-light.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
           | Gerenciar
-          strong.caret
-        ul.dropdown-menu
-          li
-            a(href='http://localhost:8080/tv/plenario-e-comissoes/folder_contents?show_all=true')
-              | Comissões
-          li
-            a(href='http://localhost:8080/tv/programas/folder_contents?show_all=true')
-              | Programas
-          li
-            a(href='http://localhost:8080/tv/atualiza_tag_senador')
-              | Atualizar tags de senadores
-      li.dropdown
-        a.dropdown-toggle(href='#', data-toggle='dropdown')
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          a.dropdown-item(href='http://localhost:8080/tv/plenario-e-comissoes/folder_contents?show_all=true') Comissões
+          a.dropdown-item(href='http://localhost:8080/tv/programas/folder_contents?show_all=true') Programas
+          a.dropdown-item(href='http://localhost:8080/tv/atualiza_tag_senador') Atualizar tags de senadores
+
+      li.nav-item.ml-1.mr-1.dropdown
+        a.btn.btn-light.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
           | Layouts
-          strong.caret
-        ul.dropdown-menu
-          li
-            a(href='http://localhost:8080/tv/layout-portal/layout-home/folder_contents')
-              | Home
-          li
-            a(href='http://localhost:8080/tv/layout-portal/layout-plenario-e-comissoes/folder_contents')
-              | Plenário e Comissões
-          li
-            a(href='http://localhost:8080/tv/layout-portal/layout-programas/folder_contents')
-              | Programas
-          li
-            a(href='http://localhost:8080/tv/layout-portal/modelo-comissao/folder_contents')
-              | Modelo - Comissão
-          li
-            a(href='http://localhost:8080/tv/layout-portal/modelo-episodio/folder_contents')
-              | Modelo - Episódio
-          li
-            a(href='http://localhost:8080/tv/layout-portal/modelo-programa/folder_contents')
-              | Modelo - Programa
-      li.dropdown
-        a.dropdown-toggle(href='#', data-toggle='dropdown')
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          a.dropdown-item(href='http://localhost:8080/tv/layout-portal/layout-home/folder_contents') Home
+          a.dropdown-item(href='http://localhost:8080/tv/layout-portal/layout-plenario-e-comissoes/folder_contents') Plenário e Comissões
+          a.dropdown-item(href='http://localhost:8080/tv/layout-portal/layout-programas/folder_contents') Programas
+          a.dropdown-item(href='http://localhost:8080/tv/layout-portal/modelo-comissao/folder_contents') Modelo - Comissão
+          a.dropdown-item(href='http://localhost:8080/tv/layout-portal/modelo-episodio/folder_contents') Modelo - Episódio
+          a.dropdown-item(href='http://localhost:8080/tv/layout-portal/modelo-programa/folder_contents') Programa
+
+      li.nav-item.ml-1.mr-1.dropdown
+        a.btn.btn-light.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
           | Vocabulários
-          strong.caret
-        ul.dropdown-menu
-          li
-            a(href='http://localhost:8080/tv/portal_vocabularies/TV_Tag/folder_contents')
-              | Tags
-          li
-            a(href='http://localhost:8080/tv/portal_vocabularies/TV_Tema/folder_contents')
-              | Temas
-      li.dropdown
-        a(href='http://localhost:8080/tv/painel')
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          a.dropdown-item(href='http://localhost:8080/tv/portal_vocabularies/TV_Tag/folder_contents') Tags
+          a.dropdown-item(href='http://localhost:8080/tv/portal_vocabularies/TV_Tema/folder_contents') Temas
+
+      li.nav-item.ml-1.mr-1
+        a.btn.btn-secondary(href='http://localhost:8080/tv/painel')
+          i.fa.fa-cog &nbsp;
           | Painel
-      li.dropdown
-        a(target='_blank', href='http://localhost:8080/tv/home-externa')
+          span.sr-only (current)
+
+      li.nav-item.ml-1.mr-1
+        a.btn.btn-secondary(href='http://localhost:8080/tv/home-externa')
+          i.fa.fa-home &nbsp;
           | Home externa
-    ul.nav.navbar-nav.navbar-right
-      li.dropdown
-        a.dropdown-toggle(href='#', data-toggle='dropdown')
-          | Usuário:
-          span cebfaria
-          b.caret
-        ul.dropdown-menu
-          li
-            a(href='logout') Sair
+          span.sr-only (current)
+
+    ul.navbar-nav.navbar-right
+      li.nav-item.ml-1.mr-1.dropdown
+        a.btn.btn-light.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false' title='Usuário')
+          i.fa.fa-user-circle-o &nbsp;
+          | CEGN
+        .dropdown-menu(aria-labelledby='navbarDropdown')
+          a.dropdown-item(href='logout') Sair
