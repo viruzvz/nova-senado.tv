@@ -13,8 +13,6 @@ import { Portuguese } from 'flatpickr/dist/l10n/pt.js'
 import 'selectize'
 import 'babel-polyfill'
 import $ from 'jquery'
-window.jQuery = $
-window.$ = $
 
 // Na página de busca componente multi select tags
 $('.select-tag').selectize({

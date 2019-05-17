@@ -14,6 +14,9 @@ module.exports = {
     filename: '[name].[contenthash:5].bundle.js',
     publicPath: '/'
   },
+  externals: {
+    'jquery': 'jQuery'
+  },
   devServer: {
     contentBase: path.resolve('./src'),
     publicPath: '/',
