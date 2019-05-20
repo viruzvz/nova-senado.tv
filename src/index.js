@@ -15,15 +15,15 @@ import 'babel-polyfill'
 import $ from 'jquery'
 
 // Na página de busca componente multi select tags
-$('.select-tag').selectize({
-  delimiter: ',',
-  persist: false,
-  create: function (input) {
-    return {
-      value: input,
-      text: input
-    }
-  }
+$(document).ready(function () {
+  $('.select-tag').selectize({
+    placeholder: 'Palavras-chave',
+    create: false,
+    valueField: 'value',
+    labelField: 'label',
+    searchField: ['label'],
+    delimiter: ',',
+  })
 })
 
 // Focus no input quando carrega modal de busca
