@@ -1,14 +1,29 @@
 .selectize-input {
-    border:none !important;
-    border-radius: 0 !important;
-    background-color: $gray-fox !important;
-    padding: 9px !important;
-    &:focus, &:active, &:focus-within {
-        background-color: $gray-basic !important;
-    }
-    input {
-        color: $cut !important;
-        font-size: $xregular !important;
-        font-weight: 400 !important;
-    }
+  border:none !important;
+  border-radius: 0 !important;
+  background-color: $gray-fox !important;
+  padding: 9px !important;
+  &:focus, &:active, &:focus-within {
+    background-color: $gray-basic !important;
+  }
+  input,select {
+    color: $cut !important;
+    font-size: $xregular !important;
+    font-weight: 400 !important;
+  }
+}
+.selectize-control.single .selectize-input {
+  box-shadow: none !important;
+}
+.selectize-dropdown .active {
+  background-color: #1e90ff !important;
+  color: #fff !important;
+}
+.selectize-dropdown-content {
+  background-color: $gray-basic;
+  border:1px solid #80bdff;
+}
+.selectize-control.single .selectize-input {
+  background-image: none !important;
+  color:$cut
 }
