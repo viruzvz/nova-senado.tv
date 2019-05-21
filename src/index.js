@@ -22,7 +22,7 @@ $(document).ready(function () {
     valueField: 'value',
     labelField: 'label',
     searchField: ['label'],
-    delimiter: ',',
+    delimiter: ','
   })
 })
 
