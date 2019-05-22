@@ -22,7 +22,12 @@ $(document).ready(function () {
     valueField: 'value',
     labelField: 'label',
     searchField: ['label'],
-    delimiter: ','
+    delimiter: ',',
+    maxItems: 6,
+    plugins: ['remove_button'],
+    onItemAdd: function() {
+      this.blur();
+    },
   })
 })
 
