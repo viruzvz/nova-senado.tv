@@ -24,7 +24,10 @@ $(document).ready(function () {
     searchField: ['label'],
     delimiter: ',',
     maxItems: 6,
-    plugins: ['remove_button']
+    plugins: ['remove_button'],
+    onItemAdd: function() {
+      this.blur();
+    },
   })
 })
 
