@@ -11,7 +11,7 @@ if ($('#spy').length > 0) {
   }
 
   // Adiciona background na (navsec, componente navbar que vem antes dos cards) quando atinge a altura do sticky
-  var mainbottom = $('.menuStick').offset().top + $('.menuStick').height()
+  var mainbottom = $('.menuStick').position().top + $('.menuStick').height()
   $(window).on('scroll', function () {
     const stop = Math.round($(window).scrollTop())
     if (stop > mainbottom) {
@@ -23,26 +23,18 @@ if ($('#spy').length > 0) {
 
   // $(window).scroll(function (event) {
   //   var scroll = $(window).scrollTop()
-  //   if (scroll >= $('#destaques').offset().top) {
+  //   if (scroll >= $('#plenario').position().top && scroll <= $('#comissoes').position().top) {
   //     $('.js-des').removeClass('d-none')
+  //     $('.js-refor').addClass('d-none')
   //   } else {
   //     $('.js-des').addClass('d-none')
+  //     $('.js-refor').removeClass('d-none')
   //   }
   // })
 
-  // $(window).scroll(function (event) {
-  //   var scroll = $(document).scrollTop()
-  //   var refElement = $('#destaques')
-  //   if (refElement.position().top <= scroll && refElement.position().top + refElement.height() > scroll) {
-  //     $('.js-des').removeClass('d-none')
-  //   } else {
-  //     $('.js-des').addClass('d-none')
-  //   }
-  // })
+  // $(window).scroll()
 
-  $(window).scroll()
-
-  // $(window).on('hashchange', onHashChange)
+  $(window).on('hashchange', onHashChange)
   $(_ => {
     onHashChange()
 

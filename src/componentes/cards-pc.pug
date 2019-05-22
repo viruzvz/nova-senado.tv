@@ -1,6 +1,6 @@
 include mixin.pug
 .position-relative.pb-6.container.scrollspy-example(data-spy="scroll" data-target="#spy" data-offset="0")
-  #canais-ao-vivo.video-list.pt-2
+  #plenario.video-list.pt-2
     .row.row-hidden
       +card('col-sm-6 col-md-6 col-lg-4', './youtube-page-vertical.html','https://picsum.photos/800/600?random=1','', 'record', 'YOUTUBE VERTICAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adisaaaaaaaaaaaaaadadadadasdasdasdasdasdaspisicing elit. Ea ad enim dolor molestias adipisicing elit. Ea ad enim dolor molestias')
       +card('col-sm-6 col-md-6 col-lg-4', './youtube-page-horizontal.html','https://picsum.photos/800/600?random=2','', 'record', 'YOUTUBE HORIZONTAL', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
@@ -27,8 +27,8 @@ include mixin.pug
       +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=9','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
     .text-center.row
       .col
-        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
-  #destaques.video-list.pt-2
+        button#btn-plenario.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
+  #comissoes.video-list.pt-2
     .mb-4.text-left.row
       .col
         p.border-bottom.white.m-0.pb-2 DESTAQUES
@@ -46,45 +46,9 @@ include mixin.pug
       +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=18','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
     .text-center.row
       .col
-        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
-  #reforma-trabalhista.video-list.pt-2
-    .mb-4.text-left.row
-      .col
-        p.border-bottom.white.m-0.pb-2 REFORMA TRABALHISTA
-    .row.row-hidden
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=19','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=20','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=21','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row.row-hidden
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=22','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=23','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=24','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row.row-hidden
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=25','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=26','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=27','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .text-center.row
-      .col
-        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
-  #programas.video-list.pt-2
-    .mb-4.text-left.row
-      .col
-        p.border-bottom.white.m-0.pb-2 PROGRAMAS
-    .row.row-hidden
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=28','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=29','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=30','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row.row-hidden
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=31','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=32','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=33','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .row.row-hidden
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=34','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=35','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=36','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
-    .text-center.row
-      .col
-        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
+        button#btn-comissoes.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
+
+
 
   button.btn-js.btn.btn-success.float-right.d-none.js-des.ativado destaques
   button.btn-js.btn.btn-success.float-right.d-none.js-refor.ativado reforma

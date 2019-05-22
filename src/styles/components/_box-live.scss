@@ -1,6 +1,7 @@
 .box-live {
     animation-duration: 3s;
     animation-fill-mode: both;
+    z-index: 2;
 }
 .box-absolute {
     position: absolute;
