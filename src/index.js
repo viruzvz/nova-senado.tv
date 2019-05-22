@@ -61,7 +61,8 @@ flatpickr('.flatpickr-input', {
 flatpickr('.flatpickr-input-agenda', {
   locale: Portuguese,
   minDate: '2017-01-01',
-  dateFormat: 'd-m-Y'
+  dateFormat: 'd-m,-Y',
+  disableMobile: 'true'
 })
 
 // Polyfill para position:sticky funcionar no IE

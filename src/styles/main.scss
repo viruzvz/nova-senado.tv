@@ -38,17 +38,3 @@
 .row-flex {
     display: flex;
 }
-.video-list {
-    //min-height: 900px;
-}
-
-.menuStick-link .active + .NavToolbar {
-  display: block
-}
-
-.NavToolbar {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-}

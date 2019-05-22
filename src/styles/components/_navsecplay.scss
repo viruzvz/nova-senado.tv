@@ -19,8 +19,31 @@
         display: inline-block;
     }
 }
+.NavToolbar {
+    display: none;
+    position: absolute;
+    right: 16px;
+    top: 0;
+    }
+.NavToolbar-res-floatright {
+    margin-left: 5px;
+}
 @include media-breakpoint-down(xs) {
     .navsecplay {
         overflow-x: scroll;
+        position: inherit;
+    }
+    .NavToolbar {
+        padding: 0;
+        background-color: #222;
+        width: 100%;
+        top: 53px;
+        right: 0;
+        text-align: right;
+        opacity: 0.9;
+    }
+    .NavToolbar-res-floatright {
+        float: left;
+        margin-left: inherit;
     }
 }

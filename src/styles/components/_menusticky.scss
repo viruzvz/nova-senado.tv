@@ -30,6 +30,24 @@
   animation-duration: 3s;
   animation-name: slidein;
 }
+.menuStick-link .active + .NavToolbar {
+display: block
+}
+//  Floating Video Start
+.minimum-sticky, .minimum-sticky-16by9, .minimum-sticky-4by3 {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.minimum-sticky-16by9 {
+	min-height: 650px;
+}
+.minimum-sticky-4by3 {
+	min-height: 565px;
+}
+.is-sticky {
+  z-index: 1031;
+}
 @keyframes slidein {
   from {
     background-color: $gray-dark;
@@ -51,13 +69,3 @@
     }
   }
 }
-.ativado {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-}
-// .nav-link.active {
-//   .ativado {
-//     display: inline;
-//   }
-// }

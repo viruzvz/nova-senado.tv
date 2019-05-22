@@ -152,6 +152,10 @@ module.exports = {
       filename: './youtube-page-horizontal.html'
     }),
     new HtmlWebpackPlugin({
+      template: './src/youtube-page-horizontal-temporadas.pug',
+      filename: './youtube-page-horizontal-temporadas.html'
+    }),
+    new HtmlWebpackPlugin({
       template: './src/videoMP4-page.pug',
       filename: './videoMP4-page.html'
     }),

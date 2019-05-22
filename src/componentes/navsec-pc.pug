@@ -1,15 +1,61 @@
 header#spy.zindex-fixed.menuStick.position-sticky.sticky-top.stickyIE
   .container
     .row
-      ul.navsecplay.nav.nav-pills
+      ul.navsecplay.nav.nav-pills.busca
         li.menuStick-link.nav-item
           a.text-uppercase.font-weight-bold.size--regular.link--cut.nav-link(href='#plenario') Plenário
-          .NavToolbar.float-right
-            select
-              option 1
-              option 2
-              option 3
+          form.NavToolbar.float-right.form-inline.pt-2
+            .form-group
+              span.btn.btn-outline-primary.flatpickr-input-agenda
+                a.input-button(data-toggle)
+                  i.fa.fa-calendar
+
         li.menuStick-link.nav-item
           a.text-uppercase.font-weight-bold.size--regular.link--cut.nav-link(href='#comissoes') Comissões
-          .NavToolbar.float-right
-            input(type='text')
+          form.NavToolbar.float-right.form-inline.pt-2
+            .form-group
+              span.btn.btn-outline-primary.flatpickr-input-agenda
+                a.input-button(data-toggle)
+                  i.fa.fa-calendar
+              .NavToolbar-res-floatright.bg-gray-fox
+                select#comissoesSelect.border.form-control.p-0
+                  option(value='CAE') CAE
+                  option(value='CAEALGCP') CAEALGCP
+                  option(value='CAS') CAS
+                  option(value='CCAI') CCAI
+                  option(value='CCC') CCC
+                  option(value='CCJ') CCJ
+                  option(value='CCT') CCT
+                  option(value='CDH') CDH
+                  option(value='CDHSTMU') CDHSTMU
+                  option(value='CDIR') CDIR
+                  option(value='CDR') CDR
+                  option(value='CDRUBM') CDRUBM
+                  option(value='CE') CE
+                  option(value='CEAERO') CEAERO
+                  option(value='CEPREV') CEPREV
+                  option(value='CI') CI
+                  option(value='CMA') CMA
+                  option(value='CMMPV 855/2018') CMMPV 855/2018
+                  option(value='CMMPV 859/2018') CMMPV 859/2018
+                  option(value='CMMPV 861/2018') CMMPV 861/2018
+                  option(value='CMMPV 862/2018') CMMPV 862/2018
+                  option(value='CMMPV 863/2018') CMMPV 863/2018
+                  option(value='CMMPV 866/2018') CMMPV 866/2018
+                  option(value='CMMPV 867/2018') CMMPV 867/2018
+                  option(value='CMMPV 868/2018') CMMPV 868/2018
+                  option(value='CMMPV 869/2018') CMMPV 869/2018
+                  option(value='CMMPV 870/2019') CMMPV 870/2019
+                  option(value='CMMPV 871/2019') CMMPV 871/2019
+                  option(value='CMMPV 872/2019') CMMPV 872/2019
+                  option(value='CMMPV 875/2019') CMMPV 875/2019
+                  option(value='CMMPV 876/2019') CMMPV 876/2019
+                  option(value='CMO') CMO
+                  option(value='CPIBRUM') CPIBRUM
+                  option(value='CRA') CRA
+                  option(value='CRAFUND') CRAFUND
+                  option(value='CRE') CRE
+                  option(value='CRESTV') CRESTV
+                  option(value='CSF') CSF
+                  option(value='CTFC') CTFC
+

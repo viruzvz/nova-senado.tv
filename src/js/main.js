@@ -21,19 +21,6 @@ if ($('#spy').length > 0) {
     }
   })
 
-  // $(window).scroll(function (event) {
-  //   var scroll = $(window).scrollTop()
-  //   if (scroll >= $('#plenario').position().top && scroll <= $('#comissoes').position().top) {
-  //     $('.js-des').removeClass('d-none')
-  //     $('.js-refor').addClass('d-none')
-  //   } else {
-  //     $('.js-des').addClass('d-none')
-  //     $('.js-refor').removeClass('d-none')
-  //   }
-  // })
-
-  // $(window).scroll()
-
   $(window).on('hashchange', onHashChange)
   $(_ => {
     onHashChange()
