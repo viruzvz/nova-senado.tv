@@ -25,9 +25,9 @@ $(document).ready(function () {
     delimiter: ',',
     maxItems: 6,
     plugins: ['remove_button'],
-    onItemAdd: function() {
-      this.blur();
-    },
+    onItemAdd: function () {
+      this.blur()
+    }
   })
 })
 

@@ -53,6 +53,11 @@
 	object-fit: cover;
 	max-height: 60vh;
 }
+@include media-breakpoint-down(xs) {
+	.flutuante {
+		min-height: 40px;
+	}
+}
 @include media-breakpoint-down(md) { 
 	.carousel-play {
 		// min-height: 50vh;

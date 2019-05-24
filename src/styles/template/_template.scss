@@ -37,8 +37,8 @@ body {background-color: $black;}
 .size--small {font-size: $small}
 .size--milli {font-size: $milli}
 @include media-breakpoint-down(sm) { 
-	.size--xlarge {font-size: $large}
-	.size--large {font-size: $medium}
+	.size--xlarge {font-size: $medium}
+	.size--large {font-size: $xmiddle}
 	.size--medium {font-size: $middle}
 	.size--middle {font-size: $regular}
 }

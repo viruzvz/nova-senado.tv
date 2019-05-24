@@ -1,7 +1,7 @@
 header#spy.zindex-fixed.menuStick.position-sticky.sticky-top.stickyIE
   .container
-    .row
-      ul.navsecplay.nav.nav-pills
+    .row.position-relative
+      ul.navsecplay.nav.nav-pills.busca
         li.menuStick-link.nav-item
           a.text-uppercase.font-weight-bold.size--regular.link--cut.nav-link(href='#canais-ao-vivo') Canais Ao vivo
         li.menuStick-link.nav-item
@@ -10,3 +10,28 @@ header#spy.zindex-fixed.menuStick.position-sticky.sticky-top.stickyIE
           a.text-uppercase.font-weight-bold.size--regular.link--cut.nav-link(href='#reforma-trabalhista') Reforma Trabalhista
         li.menuStick-link.nav-item
           a.text-uppercase.font-weight-bold.size--regular.link--cut.nav-link(href='#programas') Programas
+        li.menuStick-link.nav-item
+          a.text-uppercase.font-weight-bold.size--regular.link--cut.nav-link(href='#todos') Todos
+          form.NavToolbar.float-right.form-inline.pt-2
+            .form-group
+              .NavToolbar-res-floatright.bg-gray-fox
+                select#comissoesSelect.border.form-control.p-0
+                  option(value='Programa 1') Programa 1
+                  option(value='Programa 2') Programa 2
+                  option(value='Programa 3') Programa 3
+
+
+
+
+
+      //- .dropdown-dark
+      //-   .dropdown.position-absolute(style='right:0; margin-top: 2px; margin-right: 15px')
+      //-     a#dropdownMenuLink.text-uppercase.font-weight-bold.size--regular.link--cut.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+      //-       | Todos
+      //-     .dropdown-menu(aria-labelledby='dropdownMenuLink')
+      //-       a.dropdown-item(href='#') Action
+      //-       a.dropdown-item(href='#') Another action
+      //-       a.dropdown-item(href='#') Something else here
+
+
+              

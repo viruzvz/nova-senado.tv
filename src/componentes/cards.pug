@@ -85,6 +85,22 @@ include mixin.pug
     .text-center.row
       .col
         button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais
-
-  button.btn-js.btn.btn-success.float-right.d-none.js-des.ativado destaques
-  button.btn-js.btn.btn-success.float-right.d-none.js-refor.ativado reforma
+  #todos.video-list.pt-2
+    .mb-4.text-left.row
+      .col
+        p.border-bottom.white.m-0.pb-2 TODOS
+    .row.row-hidden
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=28','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=29','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=30','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=31','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=32','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=33','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .row.row-hidden
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=34','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=35','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+      +card('col-sm-6 col-md-6 col-lg-4', '','https://picsum.photos/800/600?random=36','time', '', 'Titulo 1', 'Titulo 2', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea ad enim dolor molestias')
+    .text-center.row
+      .col
+        button#btn-destaques.mb-4.btn.btn-outline-secondary.show-btn(type='button') Ver Mais

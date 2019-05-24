@@ -6,6 +6,26 @@ const autoprefixer = require('autoprefixer')
 const CopyPlugin = require('copy-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
+const fs = require('fs')
+
+// Our function that generates our html plugins
+function generateHtmlPlugins (templateDir) {
+  // Read files in template directory
+  const templateFiles = fs.readdirSync(path.resolve(__dirname, templateDir))
+  return templateFiles.map(item => {
+    // Split names and extension
+    const parts = item.split('.')
+    const name = parts[0]
+    const extension = parts[1]
+    // Create new HTMLWebpackPlugin with options and check if it is pug files
+    return extension === 'pug' ? new HtmlWebpackPlugin({
+      filename: `${name}.html`,
+      template: path.resolve(__dirname, `${templateDir}/${name}.${extension}`)
+    }) : void 0
+  }).filter(i => i)
+}
+
+const htmlPlugins = generateHtmlPlugins('./src')
 
 module.exports = {
   entry: ['babel-polyfill', './src/index.js'],
@@ -115,64 +135,9 @@ module.exports = {
       $: 'jquery',
       jQuery: 'jquery'
     }),
-    new HtmlWebpackPlugin({
-      template: './src/index.pug',
-      filename: './index.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/home.pug',
-      filename: './home.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/plenario-comissoes.pug',
-      filename: './plenario-comissoes.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/senadores.pug',
-      filename: './senadores.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/programas.pug',
-      filename: './programas.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/sintonizar.pug',
-      filename: './sintonizar.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/programacao.pug',
-      filename: './programacao.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/youtube-page-vertical.pug',
-      filename: './youtube-page-vertical.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/youtube-page-horizontal.pug',
-      filename: './youtube-page-horizontal.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/youtube-page-horizontal-temporadas.pug',
-      filename: './youtube-page-horizontal-temporadas.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/videoMP4-page.pug',
-      filename: './videoMP4-page.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/busca.pug',
-      filename: './busca.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/duvidas.pug',
-      filename: './duvidas.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/videoMP4-page-vertical.pug',
-      filename: './videoMP4-page-vertical.html'
-    }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash:5].css'
     })
   ]
+    .concat(htmlPlugins)
 }
